@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+@(local-require racket/date)
+@(date-display-format 'iso-8601)
+
 <html lang="en">
   <head>
     @;{ The at-exp reader for a template treats this as a comment.
@@ -97,6 +100,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
+        <p>Page generated @(date->string (current-date) #t) in @(current-process-milliseconds)ms</p>
       </footer>
     </div>
     <!-- </body> JS -->

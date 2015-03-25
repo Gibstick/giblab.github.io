@@ -1,6 +1,6 @@
     Title: How to download files from Seashell when Seashell is down
     Date: 2015-03-24T16:08:55
-    Tags: cs136, seashell, tutorials
+    Tags: cs136, tutorials
 
 We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Here's how to get your files from Seashell, even if Seashell is down.
 <!-- more -->
