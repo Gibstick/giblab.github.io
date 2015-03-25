@@ -15,7 +15,7 @@ Windows Users
 6. If you didn't want to show hidden files/folders, append `.seashell` to the path in the location bar and press enter. Otherwise, enter the `.seashell`folder. It will appear greyed out because it is a hidden folder.
 7. All your Seashell projects will be in the `projects` folder. You can copy these files as you would for any other file in Windows. Don't move/delete anything unless you know what you're doing, but copying is safe.
 
-<a href="/img/pub/windows_network_drive.png"><img src="/img/pub/windows_network_drive.png" alt="Screenshot of This PC / My Computer" style="width: 500px;" /></a>
+<a href="/img/pub/windows_network_drive_.png"><img src="/img/pub/windows_network_drive.png" alt="Screenshot of This PC / My Computer" style="width: 500px;" /></a>
 ![](/img/pub/windows_logon.png)
 ![](/img/pub/windows_seashell_folder.png)
 
