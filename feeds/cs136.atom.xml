@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
- <title type="text">My Awesome Blog: My Awesome Blog</title>
- <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
- <link href="http://www.example.com/index.html" />
- <id>urn:http-www-example-com:-index-html</id>
+ <title type="text">My Awesome Blog: Posts tagged 'cs136'</title>
+ <link rel="self" href="http://www.example.com/feeds/cs136.atom.xml" />
+ <link href="http://www.example.com/tags/cs136.html" />
+ <id>urn:http-www-example-com:-tags-cs136-html</id>
  <updated>2015-03-24T20:08:55Z</updated>
  <entry>
   <title type="text">How to download files from Seashell when Seashell is down</title>
-  <link rel="alternate" href="http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=Atom" />
+  <link rel="alternate" href="http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=cs136&amp;utm_medium=Atom" />
   <id>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</id>
   <published>2015-03-24T20:08:55Z</published>
   <updated>2015-03-24T20:08:55Z</updated>

@@ -4,123 +4,51 @@
   <title>My Awesome Blog: My Awesome Blog</title>
   <description>My Awesome Blog: My Awesome Blog</description>
   <link>http://www.example.com/index.html</link>
-  <lastBuildDate>Sun, 01 Jan 2012 05:00:00 UT</lastBuildDate>
-  <pubDate>Sun, 01 Jan 2012 05:00:00 UT</pubDate>
+  <lastBuildDate>Tue, 24 Mar 2015 20:08:55 UT</lastBuildDate>
+  <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
   <ttl>1800</ttl>
   <item>
-   <title>A 2012 blog post</title>
-   <link>http://www.example.com/blog/2012/01/01/a-2012-blog-post/?utm_source=all&amp;utm_medium=RSS</link>
-   <guid>urn:http-www-example-com:-blog-2012-01-01-a-2012-blog-post</guid>
-   <pubDate>Sun, 01 Jan 2012 05:00:00 UT</pubDate>
+   <title>How to download files from Seashell when Seashell is down</title>
+   <link>http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</guid>
+   <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
    <description>&lt;html&gt;
-&lt;p&gt;Here is an example blog post.&lt;/p&gt;
-
-&lt;p&gt;Everything after this paragraph &amp;ldquo;after the break&amp;rdquo;. On index pages and Atom feeds, it will become &amp;ldquo;Continue reading&amp;hellip;&amp;rdquo;, if you configure them to include only the summary &amp;ldquo;blurb&amp;rdquo; before the break.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;some code&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;
 &lt;!-- more--&gt;
 
-&lt;p&gt;Here&amp;rsquo;s some &lt;a href="http://bullshitipsum.com/?paragraphs=2"&gt;Bullshit Ipsum&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id="windows-users"&gt;Windows Users&lt;/h1&gt;
 
-&lt;p&gt;Addelivery integrate ecologies e-markets standards-compliant utilize technologies aggregate addelivery viral&amp;mdash;communities dynamic functionalities. Mindshare engineer viral A-list: cross-platform remix engage social cross-media social innovate distributed matrix experiences monetize utilize innovative. Action-items transition recontextualize sexy Cluetrain envisioneer, &amp;ldquo;vortals communities evolve technologies sexy methodologies.&amp;rdquo; Enhance grow compelling iterate architect matrix plug-and-play reinvent scale, distributed incentivize, extend.&lt;/p&gt;
+&lt;ol&gt;
+ &lt;li&gt;Navigate to This PC / My Computer.&lt;/li&gt;
+ &lt;li&gt;Click &amp;ldquo;Map Network Drive&amp;rdquo;&lt;/li&gt;
+ &lt;li&gt;Pick any drive you want, maybe W: for Waterloo, and for Folder, enter &lt;code&gt;\\smb-files.student.cs.uwaterloo.ca\USERID&lt;/code&gt; where USERID is your Quest/WatIAM/whatever username.&lt;/li&gt;
+ &lt;li&gt;Enter &lt;code&gt;\CS-TEACHING\USERID&lt;/code&gt; as the username. If you&amp;rsquo;ve used Seashell before, enter your standard Waterloo password here. If this doesn&amp;rsquo;t work, &lt;a href="https://www.student.cs.uwaterloo.ca/password/"&gt;reset your password&lt;/a&gt;.&lt;/li&gt;
+ &lt;li&gt;Now enter your newly-added network drive. Optional: Show hidden files/folders by going to View &amp;gt; tick &amp;ldquo;Hidden items&amp;rdquo; from the menubar.&lt;/li&gt;
+ &lt;li&gt;If you didn&amp;rsquo;t want to show hidden files/folders, append &lt;code&gt;.seashell&lt;/code&gt; to the path in the location bar and press enter. Otherwise, enter the &lt;code&gt;.seashell&lt;/code&gt;folder. It will appear greyed out because it is a hidden folder.&lt;/li&gt;
+ &lt;li&gt;All your Seashell projects will be in the &lt;code&gt;projects&lt;/code&gt; folder. You can copy these files as you would for any other file in Windows. Don&amp;rsquo;t move/delete anything unless you know what you&amp;rsquo;re doing, but copying is safe.&lt;/li&gt;&lt;/ol&gt;
 
-&lt;p&gt;Revolutionary proactive. Target; envisioneer e-services sticky robust morph users methodologies, markets content supply-chains, granular monetize reinvent harness initiatives. Plug-and-play productize vortals integrate compelling aggregate, user-contributed, integrate web-enabled grow extend mindshare, repurpose world-class harness next-generation eyeballs solutions blogospheres extend. Rss-capable methodologies, &amp;ldquo;vortals vertical,&amp;rdquo; synthesize real-time user-contributed impactful utilize architect deploy ROI redefine design proactive strategic user-centric.&lt;/p&gt;
+&lt;p&gt;&lt;a href="/img/pub/windows_network_drive.png"&gt;&lt;img src="/img/pub/windows_network_drive.png" alt="Screenshot of This PC / My Computer" style="width: 500px;" /&gt;&lt;/a&gt; &lt;img src="/img/pub/windows_logon.png" alt="" /&gt; &lt;img src="/img/pub/windows_seashell_folder.png" alt="" /&gt;&lt;/p&gt;
 
-&lt;p&gt;Here&amp;rsquo;s a footnote&lt;sup&gt;&lt;a href="#2012-01-01-a-2012-blog-post-footnote-1-definition" name="2012-01-01-a-2012-blog-post-footnote-1-return"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h1 id="mac-users"&gt;Mac Users&lt;/h1&gt;
 
-&lt;h2 id="code-blocks"&gt;Code blocks&lt;/h2&gt;
+&lt;p&gt;Note: these instructions work for the Mac Labs too, but you can skip step 6.&lt;/p&gt;
 
-&lt;p&gt;Frog optionally uses &lt;a href="http://pygments.org/"&gt;Pygments&lt;/a&gt; if it&amp;rsquo;s installed to do syntax highlighting. In your markdown using backtick code blocks you can specify a language:&lt;/p&gt;
+&lt;ol&gt;
+ &lt;li&gt;Open Finder.&lt;/li&gt;
+ &lt;li&gt;From the menu, Go -&amp;gt; Connect to Server&amp;hellip; (command-K)&lt;/li&gt;
+ &lt;li&gt;Enter &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; as the Server Address, where USERID is your Quest/WatIAM/whatever username.&lt;/li&gt;
+ &lt;li&gt;Optional: Click the "+" icon to add it to favourites.&lt;/li&gt;
+ &lt;li&gt;Click Connect.&lt;/li&gt;
+ &lt;li&gt;Enter your username/password. I don&amp;rsquo;t have a MAC so I don&amp;rsquo;t know how this step would work, but I think you can just enter it normally. If this doesn&amp;rsquo;t work, &lt;a href="https://www.student.cs.uwaterloo.ca/password/"&gt;reset your password&lt;/a&gt;.&lt;/li&gt;
+ &lt;li&gt;Navigate to the &lt;code&gt;.seashell&lt;/code&gt; hidden folder: Go &amp;gt; Go to Folder (Shift-Command-G), type &lt;code&gt;.seashell&lt;/code&gt;. Go.&lt;/li&gt;
+ &lt;li&gt;All your Seashell projects will be in the &lt;code&gt;projects&lt;/code&gt; folder. You can copy these files as you would for any other file. Don&amp;rsquo;t move/delete anything unless you know what you&amp;rsquo;re doing, but copying is safe.&lt;/li&gt;&lt;/ol&gt;
 
-&lt;pre&gt;&lt;code&gt;```language
-some racket code
-```&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="figure"&gt;&lt;img src="/img/pub/Mac_smb_add.png" alt="" /&gt;
+ &lt;p class="caption"&gt;&lt;/p&gt;&lt;/div&gt;
 
-&lt;p&gt;That name is given to Pygments as the lexer to use.&lt;/p&gt;
+&lt;div class="figure"&gt;&lt;img src="/img/pub/Mac_finder_goto_seashell.png" alt="" /&gt;
+ &lt;p class="caption"&gt;&lt;/p&gt;&lt;/div&gt;
 
-&lt;p&gt;For example this:&lt;/p&gt;
+&lt;h1 id="linux-users"&gt;Linux Users&lt;/h1&gt;
 
-&lt;pre&gt;&lt;code&gt;```js
-/**
- * Some JavaScript
- */
-function foo()
-{
-    if (counter &amp;lt;= 10)
-        return;
-    // it works!
-```&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Yields this:&lt;/p&gt;
-
-&lt;div class="brush: js"&gt;
- &lt;pre&gt;&lt;code&gt;/**
- * Some JavaScript
- */
-function foo()
-{
-    if (counter &amp;lt;= 10)
-        return;
-    // it works!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And this:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;```racket
-#lang racket
-;; Finds Racket sources in all subdirs
-(for ([path (in-directory)])
-  (when (regexp-match? #rx"[.]rkt$" path)
-    (printf "source file: ~a\n" path)))
-(symbol-&amp;gt;string 'foo)
-```&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Yields this:&lt;/p&gt;
-
-&lt;div class="brush: racket"&gt;
- &lt;pre&gt;&lt;code&gt;#lang racket
-;; Finds Racket sources in all subdirs
-(for ([path (in-directory)])
-  (when (regexp-match? #rx"[.]rkt$" path)
-    (printf "source file: ~a\n" path)))
-(symbol-&amp;gt;string 'foo)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice that, for Racket, symbols with unambiguous documentation (provided by one library, or provided by several where one is &lt;code&gt;racket&lt;/code&gt; or &lt;code&gt;racket/base&lt;/code&gt;) are links to that documentation.&lt;/p&gt;
-
-&lt;p&gt;This also works outside fenced code blocks, for symbols in backticks immediately followed by &lt;code&gt;[racket]&lt;/code&gt;. Example: &lt;code&gt;&lt;a href="http://docs.racket-lang.org/reference/Writing.html#(def._((quote._~23~25kernel)._printf))" style="color: inherit"&gt;printf&lt;/a&gt;&lt;/code&gt;. This isn&amp;rsquo;t official Markdown; it&amp;rsquo;s simply a pun on link syntax and fenced code block languages. This is similar to using &lt;code&gt;@racket[printf]&lt;/code&gt; in Scribble.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;&lt;a href="http://docs.racket-lang.org/reference/symbols.html#(def._((quote._~23~25kernel)._symbol-~3estring))" style="color: inherit"&gt;symbol-&amp;gt;string&lt;/a&gt;&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Here is a lambda: λ.&lt;/p&gt;
-
-&lt;p&gt;Here is a lambda in code backticks: &lt;code&gt;λ&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;And here in indented code block:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(λ () #t)&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And here in fenced code block, no lang specified:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(λ () #t)&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;And here in fenced code block, lang = &lt;code&gt;racket&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class="brush: racket"&gt;
- &lt;pre&gt;&lt;code&gt;(λ () #t)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;And here in fenced code block, lang = &lt;code&gt;scheme&lt;/code&gt;:&lt;/p&gt;
-
-&lt;div class="brush: scheme"&gt;
- &lt;pre&gt;&lt;code&gt;(λ () #t)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here&amp;rsquo;s a simple &lt;code&gt;for&lt;/code&gt; macro, written in &lt;a href="http://docs.racket-lang.org/reference/stx-patterns.html"&gt;Racket&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class="brush: racket"&gt;
- &lt;pre&gt;&lt;code&gt;(define-syntax-rule (for (x e1) e2)
-  (for-each (λ (x) e2) e1))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;The end.&lt;/p&gt;
-
-&lt;div class="footnotes"&gt;
- &lt;ol&gt;
-  &lt;li id="2012-01-01-a-2012-blog-post-footnote-1-definition" class="footnote-definition"&gt;
-   &lt;p&gt;Footnote definition.&amp;nbsp;&lt;a href="#2012-01-01-a-2012-blog-post-footnote-1-return"&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/html&gt;</description></item></channel></rss>
+&lt;p&gt;Coming soon, but for now, the Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>

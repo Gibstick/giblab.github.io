@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
- <title type="text">My Awesome Blog: My Awesome Blog</title>
- <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
- <link href="http://www.example.com/index.html" />
- <id>urn:http-www-example-com:-index-html</id>
- <updated>2015-03-24T20:08:55Z</updated>
- <entry>
-  <title type="text">How to download files from Seashell when Seashell is down</title>
-  <link rel="alternate" href="http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</id>
-  <published>2015-03-24T20:08:55Z</published>
-  <updated>2015-03-24T20:08:55Z</updated>
-  <author>
-   <name>The Unknown Author</name></author>
-  <content type="html">&lt;html&gt;
+<rss version="2.0">
+ <channel>
+  <title>My Awesome Blog: Posts tagged 'seashell'</title>
+  <description>My Awesome Blog: Posts tagged 'seashell'</description>
+  <link>http://www.example.com/tags/seashell.html</link>
+  <lastBuildDate>Tue, 24 Mar 2015 20:08:55 UT</lastBuildDate>
+  <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>How to download files from Seashell when Seashell is down</title>
+   <link>http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=seashell&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</guid>
+   <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
+   <description>&lt;html&gt;
 &lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;
 &lt;!-- more--&gt;
 
@@ -52,4 +51,4 @@
 
 &lt;h1 id="linux-users"&gt;Linux Users&lt;/h1&gt;
 
-&lt;p&gt;Coming soon, but for now, the Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
+&lt;p&gt;Coming soon, but for now, the Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
