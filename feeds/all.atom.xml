@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">My Awesome Blog: My Awesome Blog</title>
- <link rel="self" href="http://www.example.com/feeds/all.atom.xml" />
- <link href="http://www.example.com/index.html" />
- <id>urn:http-www-example-com:-index-html</id>
+ <link rel="self" href="https://gibstick.github.io/feeds/all.atom.xml" />
+ <link href="https://gibstick.github.io/index.html" />
+ <id>urn:https-gibstick-github-io:-index-html</id>
  <updated>2015-03-29T05:49:58Z</updated>
  <entry>
   <title type="text">Why Seashell seems to suck</title>
-  <link rel="alternate" href="http://www.example.com/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-blog-2015-03-29-why-seashell-seems-to-suck</id>
+  <link rel="alternate" href="https://gibstick.github.io/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-gibstick-github-io:-blog-2015-03-29-why-seashell-seems-to-suck</id>
   <published>2015-03-29T05:49:58Z</published>
   <updated>2015-03-29T05:49:58Z</updated>
   <author>
@@ -34,8 +34,8 @@
 &lt;p&gt;In a later post I&amp;rsquo;ll cover my CS 136 workflow. I didn&amp;rsquo;t actually use Seashell that, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">How to download files from Seashell when Seashell is down</title>
-  <link rel="alternate" href="http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=Atom" />
-  <id>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</id>
+  <link rel="alternate" href="https://gibstick.github.io/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-gibstick-github-io:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</id>
   <published>2015-03-24T20:08:55Z</published>
   <updated>2015-03-24T20:08:55Z</updated>
   <author>

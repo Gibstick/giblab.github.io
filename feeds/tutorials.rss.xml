@@ -3,14 +3,14 @@
  <channel>
   <title>My Awesome Blog: Posts tagged 'tutorials'</title>
   <description>My Awesome Blog: Posts tagged 'tutorials'</description>
-  <link>http://www.example.com/tags/tutorials.html</link>
+  <link>https://gibstick.github.io/tags/tutorials.html</link>
   <lastBuildDate>Tue, 24 Mar 2015 20:08:55 UT</lastBuildDate>
   <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>How to download files from Seashell when Seashell is down</title>
-   <link>http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=tutorials&amp;utm_medium=RSS</link>
-   <guid>urn:http-www-example-com:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</guid>
+   <link>https://gibstick.github.io/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=tutorials&amp;utm_medium=RSS</link>
+   <guid>urn:https-gibstick-github-io:-blog-2015-03-24-how-to-download-files-from-seashell-when-seashell-is-down</guid>
    <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;
