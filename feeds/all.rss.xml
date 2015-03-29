@@ -4,9 +4,33 @@
   <title>My Awesome Blog: My Awesome Blog</title>
   <description>My Awesome Blog: My Awesome Blog</description>
   <link>http://www.example.com/index.html</link>
-  <lastBuildDate>Tue, 24 Mar 2015 20:08:55 UT</lastBuildDate>
-  <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
+  <lastBuildDate>Sun, 29 Mar 2015 05:49:58 UT</lastBuildDate>
+  <pubDate>Sun, 29 Mar 2015 05:49:58 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Why Seashell seems to suck</title>
+   <link>http://www.example.com/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:http-www-example-com:-blog-2015-03-29-why-seashell-seems-to-suck</guid>
+   <pubDate>Sun, 29 Mar 2015 05:49:58 UT</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;It&amp;rsquo;s the night before the assignemnt is due, and you have errors out the wazoo. You debug furiously with a frown. All of a sudden, Seashell is down! &lt;strong&gt;FIX IT.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In all seriousness, it&amp;rsquo;s not really Seashell&amp;rsquo;s fault. Here&amp;rsquo;s why.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;Seashell is a great project, built by some very talented developers at Waterloo and various other contributors. Your ISA might have worked on Seashell this term. See &lt;a href="https://github.com/cs136/seashell"&gt;Seashell&amp;rsquo;s github&lt;/a&gt;. It also has other contributors, like CS 136 students. All this to say, the core Seashell developers know what they&amp;rsquo;re doing. Pretty sure the lead developer is getting paid for it too.&lt;/p&gt;
+
+&lt;p&gt;When Seashell goes down it&amp;rsquo;s almost always because of the CSCF&amp;rsquo;s (Computer Science Computing Facility) servers going down or becoming generally unresponsive. Seashell uses three backend servers, and these backend servers are shared with pretty much everyone in the CS faculty. So you have other people doing work on these servers, running their programs, etc. Marmoset also runs its tests on these servers. Other courses also run their tests on these servers. Sometimes, people (perhaps unintentionally) hog a lot of system resouces. This kills the server. What follows is an explanation of some of the issues we&amp;rsquo;ve had this year.&lt;/p&gt;
+
+&lt;p&gt;The most recent incident involved Seashell not running/testing any files. Saving probably wasn&amp;rsquo;t working too. The culprit was CS 341 running tests that ate up 100% memory and 100% CPU. At one point they brought down two servers this way. 100% memory means 128GB of memory; at some other point they brought down the beefier server with 256GB of memory.&lt;/p&gt;
+
+&lt;p&gt;This other time, someone ran a &lt;a href="http://en.wikipedia.org/wiki/Fork_bomb"&gt;fork bomb&lt;/a&gt; on one of the servers, rendering that backend server unresponsive. A fork bomb is basically a program that calls itself over and over, multiplying and using up system resources and process IDs. There are ways to prevent this, but the servers aren&amp;rsquo;t configured to do so.&lt;/p&gt;
+
+&lt;p&gt;For some reason, when Marmoset stops testing, the web servers get slow. When this happens Seashell takes dozens of seconds to load, but once you&amp;rsquo;re in it&amp;rsquo;s generally OK. Marmoset issues are not new&lt;a href="https://www.reddit.com/r/uwaterloo/comments/3021ga/am_i_the_only_one_who_thinks_cs_136_has_been_a/cpos958"&gt;(1)&lt;/a&gt;&lt;a href="https://www.reddit.com/r/uwaterloo/comments/3021ga/am_i_the_only_one_who_thinks_cs_136_has_been_a/cpol9ca"&gt;(2)&lt;/a&gt;, and they&amp;rsquo;re caused by the enormous load from ~800 students submitting the night before.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t blame the people who work hard on Seashell. It&amp;rsquo;s a lot better than what came before: RunC in VirtualBox. VirtualBox is mediocre at best, and it&amp;rsquo;s an absolutely horrible experience on low-end computers. Before that, they just told people to code with a terminal&lt;a href="https://www.reddit.com/r/uwaterloo/comments/3021ga/am_i_the_only_one_who_thinks_cs_136_has_been_a/cpp5qse"&gt;(3)&lt;/a&gt; (it&amp;rsquo;s that hacker thing with all the text and commands), which probably scared away a lot of people. Seashell is nice and it abstracts away all these messy details.&lt;/p&gt;
+
+&lt;p&gt;In a later post I&amp;rsquo;ll cover my CS 136 workflow. I didn&amp;rsquo;t actually use Seashell that, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>How to download files from Seashell when Seashell is down</title>
    <link>http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/?utm_source=all&amp;utm_medium=RSS</link>

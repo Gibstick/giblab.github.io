@@ -1,2 +1,3 @@
+http://www.example.com/blog/2015/03/29/why-seashell-seems-to-suck/
 http://www.example.com/blog/2015/03/24/how-to-download-files-from-seashell-when-seashell-is-down/
 http://www.example.com/About.html
