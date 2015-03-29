@@ -2,7 +2,7 @@
     Date: 2015-03-24T16:08:55
     Tags: cs136, tutorials
 
-We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Here's how to get your files from Seashell, even if Seashell is down.
+We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here's how to get your files from Seashell, even if Seashell is down.
 <!-- more -->
 Windows Users
 =============
@@ -29,9 +29,9 @@ Note: these instructions work for the Mac Labs too, but you can skip step 6.
 3. Enter ``smb://smb-files.student.cs.uwaterloo.ca/USERID`` as the Server Address, where USERID is your Quest/WatIAM/whatever username.
 4. Optional: Click the "+" icon to add it to favourites.
 5. Click Connect.
-6. Enter your username/password. I don't have a MAC so I don't know how this step would work, but I think you can just enter it normally. If this doesn't work, [reset your password](https://www.student.cs.uwaterloo.ca/password/).
-6. Navigate to the  `.seashell` hidden folder: Go > Go to Folder (Shift-Command-G), type `.seashell`. Go.
-7. All your Seashell projects will be in the `projects` folder. You can copy these files as you would for any other file. Don't move/delete anything unless you know what you're doing, but copying is safe.
+6. Enter your username/password. If this doesn't work, [reset your password](https://www.student.cs.uwaterloo.ca/password/). Note: after this step, it might be necessary to manually go into your user folder. Just scroll through and find it; the folder name is your username.
+7. Navigate to the  `.seashell` hidden folder: Go > Go to Folder (Shift-Command-G), type `.seashell`. Go.
+8. All your Seashell projects will be in the `projects` folder. You can copy these files as you would for any other file. Don't move/delete anything unless you know what you're doing, but copying is safe.
 
 ![](/img/pub/Mac_smb_add.png)
 ![](/img/pub/Mac_finder_goto_seashell.png)
@@ -39,4 +39,4 @@ Note: these instructions work for the Mac Labs too, but you can skip step 6.
 Linux Users
 ===========
 
-Coming soon, but for now, the Seashell files are all stored under `~/.seashell/projects/` on `linux.student.cs.uwaterloo.ca`. If you know how to mount SMB shares (I don't), the address is `smb://smb-files.student.cs.uwaterloo.ca/USERID` where USERID is your username.
+Seashell files are all stored under `~/.seashell/projects/` on `linux.student.cs.uwaterloo.ca`. If you know how to mount SMB shares (I don't), the address is `smb://smb-files.student.cs.uwaterloo.ca/USERID` where USERID is your username. Or just mount the root and navigate to your directory.

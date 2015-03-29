@@ -14,7 +14,7 @@
   <author>
    <name>The Unknown Author</name></author>
   <content type="html">&lt;html&gt;
-&lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;
+&lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;
 &lt;!-- more--&gt;
 
 &lt;h1 id="windows-users"&gt;Windows Users&lt;/h1&gt;
@@ -40,7 +40,7 @@
  &lt;li&gt;Enter &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; as the Server Address, where USERID is your Quest/WatIAM/whatever username.&lt;/li&gt;
  &lt;li&gt;Optional: Click the "+" icon to add it to favourites.&lt;/li&gt;
  &lt;li&gt;Click Connect.&lt;/li&gt;
- &lt;li&gt;Enter your username/password. I don&amp;rsquo;t have a MAC so I don&amp;rsquo;t know how this step would work, but I think you can just enter it normally. If this doesn&amp;rsquo;t work, &lt;a href="https://www.student.cs.uwaterloo.ca/password/"&gt;reset your password&lt;/a&gt;.&lt;/li&gt;
+ &lt;li&gt;Enter your username/password. If this doesn&amp;rsquo;t work, &lt;a href="https://www.student.cs.uwaterloo.ca/password/"&gt;reset your password&lt;/a&gt;. Note: after this step, it might be necessary to manually go into your user folder. Just scroll through and find it; the folder name is your username.&lt;/li&gt;
  &lt;li&gt;Navigate to the &lt;code&gt;.seashell&lt;/code&gt; hidden folder: Go &amp;gt; Go to Folder (Shift-Command-G), type &lt;code&gt;.seashell&lt;/code&gt;. Go.&lt;/li&gt;
  &lt;li&gt;All your Seashell projects will be in the &lt;code&gt;projects&lt;/code&gt; folder. You can copy these files as you would for any other file. Don&amp;rsquo;t move/delete anything unless you know what you&amp;rsquo;re doing, but copying is safe.&lt;/li&gt;&lt;/ol&gt;
 
@@ -52,4 +52,4 @@
 
 &lt;h1 id="linux-users"&gt;Linux Users&lt;/h1&gt;
 
-&lt;p&gt;Coming soon, but for now, the Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
+&lt;p&gt;Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username. Or just mount the root and navigate to your directory.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
