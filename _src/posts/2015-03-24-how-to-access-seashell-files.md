@@ -1,9 +1,12 @@
-    Title: How to download files from Seashell when Seashell is down
+    Title: How to access Seashell files
     Date: 2015-03-24T16:08:55
     Tags: cs136, tutorials
 
 We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here's how to get your files from Seashell, even if Seashell is down.
 <!-- more -->
+
+You can also delete the object (.o) files from Seashell this way, because you currently can't do that through Seashell itself. You might need this for A10.
+
 Windows Users
 =============
 
@@ -39,4 +42,4 @@ Note: these instructions work for the Mac Labs too, but you can skip step 6.
 Linux Users
 ===========
 
-Seashell files are all stored under `~/.seashell/projects/` on `linux.student.cs.uwaterloo.ca`. If you know how to mount SMB shares (I don't), the address is `smb://smb-files.student.cs.uwaterloo.ca/USERID` where USERID is your username. Or just mount the root and navigate to your directory.
+Seashell files are all stored under `~/.seashell/projects/` on `linux.student.cs.uwaterloo.ca`. If you know how to mount SMB shares (I don't), the address is `smb://smb-files.student.cs.uwaterloo.ca/USERID` where USERID is your username. Or just mount the root and navigate to your directory. Or just scp and whatever.
