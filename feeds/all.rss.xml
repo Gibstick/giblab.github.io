@@ -77,4 +77,4 @@
 
 &lt;h1 id="linux-users"&gt;Linux Users&lt;/h1&gt;
 
-&lt;p&gt;Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username. Or just mount the root and navigate to your directory.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
+&lt;p&gt;Seashell files are all stored under &lt;code&gt;~/.seashell/projects/&lt;/code&gt; on &lt;code&gt;linux.student.cs.uwaterloo.ca&lt;/code&gt;. If you know how to mount SMB shares (I don&amp;rsquo;t), the address is &lt;code&gt;smb://smb-files.student.cs.uwaterloo.ca/USERID&lt;/code&gt; where USERID is your username. Or just mount the root and navigate to your directory. Or just scp and whatever.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
