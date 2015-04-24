@@ -1,5 +1,5 @@
 # Required: Should NOT end in trailing slash.
-scheme/host = https://gibstick.github.io
+scheme/host = https://cwang.me
 
 # The title of the blog. Used when generating feeds.
 title = My Awesome Blog

@@ -1,4 +1,4 @@
-https://gibstick.github.io/blog/2015/03/29/why-seashell-seems-to-suck/
-https://gibstick.github.io/blog/2015/03/24/how-to-access-seashell-files/
-https://gibstick.github.io/Projects.html
-https://gibstick.github.io/About.html
+https://cwang.me/blog/2015/03/29/why-seashell-seems-to-suck/
+https://cwang.me/blog/2015/03/24/how-to-access-seashell-files/
+https://cwang.me/Projects.html
+https://cwang.me/About.html
