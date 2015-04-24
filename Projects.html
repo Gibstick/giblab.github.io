@@ -5,13 +5,13 @@
   <head>
 
     <meta charset="utf-8">
-    <title>My Awesome Blog</title>
-    <meta name="description" content="My Awesome Blog">
+    <title>Projects</title>
+    <meta name="description" content="Projects: cs136-autosubmit: Python script for automatically submitting assignments to Marmoset, the central submission server. Had to submit several patches for the Marmoset library I was using, and as of now there's still a bug with zip files being opene...">
     <meta name="author"      content="The Unknown Author">
-    <meta name="keywords"    content="cs136, tutorials, all">
+    <meta name="keywords"    content="">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://gibstick.github.io/index.html">
+    <link rel="canonical" href="https://gibstick.github.io/Projects.html">
 
 
     <!-- CSS -->
@@ -69,7 +69,7 @@
             <li>
               <a href="/About.html">About</a>
             </li> 
-            <li>
+            <li class="active">
               <a href="/Projects.html">Projects</a>
             </li> 
             <li><a href="/feeds/all.atom.xml">Atom</a></li>
@@ -84,33 +84,38 @@
         <!-- Main column -->
         <div id="content" class="col-md-12">
 
-          <h1>Welcome</h1>
-          <p>This is a boring blog</p> 
 
 
 
-          <article>
-  <header>
-    <h2><a href='/blog/2015/03/29/why-seashell-seems-to-suck/'>Why Seashell seems to suck</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2015-03-29" pubdate="true">2015-03-29</time> :: <span class="tags"><a href="/tags/cs136.html">cs136</a></span></p>
-  </header>
 
-<p>It&rsquo;s the night before the assignemnt is due, and you have errors out the wazoo. You debug furiously with a frown. All of a sudden, Seashell is down! <strong>FIX IT.</strong></p>
 
-<p>In all seriousness, it&rsquo;s not really Seashell&rsquo;s fault. Here&rsquo;s why.</p>
-<footer class="read-more"><a href="/blog/2015/03/29/why-seashell-seems-to-suck/">&hellip;more&hellip;</a></footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2015/03/24/how-to-access-seashell-files/'>How to access Seashell files</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2015-03-24" pubdate="true">2015-03-24</time> :: <span class="tags"><a href="/tags/cs136.html">cs136</a>, <a href="/tags/tutorials.html">tutorials</a></span></p>
-  </header>
+<h1 id="projects">Projects</h1>
 
-<p>We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here&rsquo;s how to get your files from Seashell, even if Seashell is down.</p>
-<footer class="read-more"><a href="/blog/2015/03/24/how-to-access-seashell-files/">&hellip;more&hellip;</a></footer>
-</article>
+<h2 id="httpsgithubcomgibstickcs136-autosubmitcs136-autosubmit"><a href="https://github.com/Gibstick/cs136-autosubmit">cs136-autosubmit</a></h2>
+
+<p>Python script for automatically submitting assignments to Marmoset, the central submission server. Had to submit several patches for the <a href="https://github.com/hkpeprah/marmoset">Marmoset library</a> I was using, and as of now there&rsquo;s still <a href="https://github.com/hkpeprah/marmoset/pull/23">a bug</a> with zip files being opened in text mode, which messes them up quite a bit. Wrote this and the next project because I didn&rsquo;t want to be dead in the water when Seashell went down.</p>
+
+<h2 id="httpsgithubcomgibstickcs136-bunnycs136-bunny"><a href="https://github.com/Gibstick/cs136-bunny">cs136-bunny</a></h2>
+
+<p>Packaged python program for I/O testing, compatible with CS 136&rsquo;s testing format. Outputs a more useful diff, unlike the tool they use.</p>
+
+<h2 id="httpsgithubcomgibstickdiscosheepdiscosheep"><a href="https://github.com/Gibstick/DiscoSheep">DiscoSheep</a></h2>
+
+<p>A from-scratch remake of the popular bukkit plugin DiscoSheep. It spawns dancing sheep, and I guess the disco part of it is that they change colour. Somehow it still works with Spigot.</p>
+
+<h2 id="httpsgithubcomgibsticklatex-fontawesomelatex-fontawesome"><a href="https://github.com/Gibstick/latex-fontawesome">latex-fontawesome</a></h2>
+
+<p>A fork of an <a href="https://github.com/furl/latex-fontawesome">outdated original</a>, which itself was an update of another older version. It provides FontAwesome icons in XeLaTeX.</p>
+
+<p>Other projects and contributions to projects can be found on my <a href="https://github.com/Gibstick">GitHub profile</a>.</p>
+
+<h3 id="odd-scripts">Odd scripts</h3>
+
+<p>Not that impressive, but they could be useful.</p>
+
+<p><a href="https://gist.github.com/Gibstick/7bb97dbedc8ca2a0c67c">CS 136 Mark Calculation Script</a> calculates your mark in CS 136 before going into the exam. It probably breaks when you don&rsquo;t have the required marks (need midterm mark).</p>
+
+<p><a href="https://gist.github.com/Gibstick/6a2d6e753c38f4335e2c">Desire2Perfect</a> makes Learn display all grades as 100%.</p>
         </div>
       </div>
       <footer>
@@ -137,7 +142,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-04-23T20:16:59 in 1468ms</p>
+        <p>Page generated 2015-04-23T20:16:59 in 1562ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
