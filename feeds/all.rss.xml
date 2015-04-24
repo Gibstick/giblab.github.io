@@ -3,14 +3,14 @@
  <channel>
   <title>My Awesome Blog: My Awesome Blog</title>
   <description>My Awesome Blog: My Awesome Blog</description>
-  <link>https://gibstick.github.io/index.html</link>
+  <link>https://cwang.me/index.html</link>
   <lastBuildDate>Sun, 29 Mar 2015 05:49:58 UT</lastBuildDate>
   <pubDate>Sun, 29 Mar 2015 05:49:58 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Why Seashell seems to suck</title>
-   <link>https://gibstick.github.io/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=RSS</link>
-   <guid>urn:https-gibstick-github-io:-blog-2015-03-29-why-seashell-seems-to-suck</guid>
+   <link>https://cwang.me/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:https-cwang-me:-blog-2015-03-29-why-seashell-seems-to-suck</guid>
    <pubDate>Sun, 29 Mar 2015 05:49:58 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It&amp;rsquo;s the night before the assignemnt is due, and you have errors out the wazoo. You debug furiously with a frown. All of a sudden, Seashell is down! &lt;strong&gt;FIX IT.&lt;/strong&gt;&lt;/p&gt;
@@ -33,8 +33,8 @@
 &lt;p&gt;In a later post I&amp;rsquo;ll cover my CS 136 workflow. I didn&amp;rsquo;t actually use Seashell that, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>How to access Seashell files</title>
-   <link>https://gibstick.github.io/blog/2015/03/24/how-to-access-seashell-files/?utm_source=all&amp;utm_medium=RSS</link>
-   <guid>urn:https-gibstick-github-io:-blog-2015-03-24-how-to-access-seashell-files</guid>
+   <link>https://cwang.me/blog/2015/03/24/how-to-access-seashell-files/?utm_source=all&amp;utm_medium=RSS</link>
+   <guid>urn:https-cwang-me:-blog-2015-03-24-how-to-access-seashell-files</guid>
    <pubDate>Tue, 24 Mar 2015 20:08:55 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here&amp;rsquo;s how to get your files from Seashell, even if Seashell is down.&lt;/p&gt;

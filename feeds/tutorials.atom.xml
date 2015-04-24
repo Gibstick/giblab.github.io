@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">My Awesome Blog: Posts tagged 'tutorials'</title>
- <link rel="self" href="https://gibstick.github.io/feeds/tutorials.atom.xml" />
- <link href="https://gibstick.github.io/tags/tutorials.html" />
- <id>urn:https-gibstick-github-io:-tags-tutorials-html</id>
+ <link rel="self" href="https://cwang.me/feeds/tutorials.atom.xml" />
+ <link href="https://cwang.me/tags/tutorials.html" />
+ <id>urn:https-cwang-me:-tags-tutorials-html</id>
  <updated>2015-03-24T20:08:55Z</updated>
  <entry>
   <title type="text">How to access Seashell files</title>
-  <link rel="alternate" href="https://gibstick.github.io/blog/2015/03/24/how-to-access-seashell-files/?utm_source=tutorials&amp;utm_medium=Atom" />
-  <id>urn:https-gibstick-github-io:-blog-2015-03-24-how-to-access-seashell-files</id>
+  <link rel="alternate" href="https://cwang.me/blog/2015/03/24/how-to-access-seashell-files/?utm_source=tutorials&amp;utm_medium=Atom" />
+  <id>urn:https-cwang-me:-blog-2015-03-24-how-to-access-seashell-files</id>
   <published>2015-03-24T20:08:55Z</published>
   <updated>2015-03-24T20:08:55Z</updated>
   <author>

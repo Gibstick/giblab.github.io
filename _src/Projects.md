@@ -14,7 +14,7 @@ A from-scratch remake of the popular bukkit plugin DiscoSheep. It spawns dancing
 
 ## [latex-fontawesome](https://github.com/Gibstick/latex-fontawesome)
 
-A fork of an [outdated original](https://github.com/furl/latex-fontawesome), which itself was an update of another older version. It provides FontAwesome icons in XeLaTeX.
+A fork of an [outdated original](https://github.com/furl/latex-fontawesome), which itself was an update of another older version. It provides FontAwesome icons in XeLaTeX. Didn't really do much for this one.
 
 
 Other projects and contributions to projects can be found on my [GitHub profile](https://github.com/Gibstick).
