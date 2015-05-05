@@ -5,14 +5,14 @@
   <head>
 
     <meta charset="utf-8">
-    <title>My Awesome Blog</title>
-    <meta name="description" content="My Awesome Blog">
+    <title>OCDSB Career Cruising: What are passwords?</title>
+    <meta name="description" content="From 2010 to 2015 at least, The Ottawa-Carleton District School Board used the eponymous course management system from Career Cruising. It was a web application that let students view grades and register for courses in upcoming terms. There were managemen...">
     <meta name="author"      content="The Unknown Author">
-    <meta name="keywords"    content="cs136, tutorials, security, all">
+    <meta name="keywords"    content="security">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://cwang.me/index.html">
-
+    <link rel="canonical" href="https://cwang.me/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/">
+    <link rel="next" href="/blog/2015/03/29/why-seashell-seems-to-suck/">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -86,42 +86,66 @@
         <!-- Main column -->
         <div id="content" class="col-md-12">
 
-          <h1>Welcome</h1>
-          <p>This is a boring blog</p> 
+
 
 
 
           <article>
   <header>
-    <h2><a href='/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/'>OCDSB Career Cruising: What are passwords?</a></h2>
+    <h1>OCDSB Career Cruising: What are passwords?</h1>
     <p class='date-and-tags'>
 <time datetime="2015-05-04" pubdate="true">2015-05-04</time> :: <span class="tags"><a href="/tags/security.html">security</a></span></p>
   </header>
 
 <p>From 2010 to 2015 at least, The Ottawa-Carleton District School Board used the eponymous course management system from <a href="http://public.careercruising.com/en/">Career Cruising</a>. It was a web application that let students view grades and register for courses in upcoming terms. There were management features as well that allowed guidance counselors (the high-school equivalent of academic advisors) to upload grades or something. The system worked fairly well, but up until 2014, your password would get reset to your birthday every year. This turned out to be a significant security flaw.</p>
-<footer class="read-more"><a href="/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/">&hellip;more&hellip;</a></footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2015/03/29/why-seashell-seems-to-suck/'>Why Seashell seems to suck</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2015-03-29" pubdate="true">2015-03-29</time> :: <span class="tags"><a href="/tags/cs136.html">cs136</a></span></p>
-  </header>
+<!-- more-->
 
-<p>It&rsquo;s the night before the assignemnt is due, and you have errors out the wazoo. You debug furiously with a frown. All of a sudden, Seashell is down! <strong>FIX IT.</strong></p>
+<p>Of course, every user had a password of the same format. And most users didn&rsquo;t bother to change their password after the reset until they had to use the system again, which was much later. Birthdays are not private information. Despite my lack of experience I determined it was feasible to scrape birthdays from Facebook using their API. Additionally, usernames were student IDs, and the school computer system&mdash;Windows XP computers on a domain&mdash;had a handy tool, Active Directory Search, that allowed one to lookup student IDs just by searching someone&rsquo;s name. Presumably this step could be automated as well.</p>
 
-<p>In all seriousness, it&rsquo;s not really Seashell&rsquo;s fault. Here&rsquo;s why.</p>
-<footer class="read-more"><a href="/blog/2015/03/29/why-seashell-seems-to-suck/">&hellip;more&hellip;</a></footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2015/03/24/how-to-access-seashell-files/'>How to access Seashell files</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2015-03-24" pubdate="true">2015-03-24</time> :: <span class="tags"><a href="/tags/cs136.html">cs136</a>, <a href="/tags/tutorials.html">tutorials</a></span></p>
-  </header>
+<p>The easiest way to exploit this is with a targeted attack. Once a birthday and student ID pair are obtained for one person, an attacker can register the student for useless courses. I suppose the worst case would be a delayed graduation, if the guidance department doesn&rsquo;t step in to fix it. The attacker could also blackmail a student by threatening to disclose grades. On the other hand, a denial of service attack is also possible if a large number of student ID/birthday pairs are obtained, which would swamp the guidance department. With these possible attacks in mind, the flaw can be seen to be fairly severe.</p>
 
-<p>We all love Seashell, because the only course-sanctioned alternative would be to use RunC inside VirtualBox. But sometimes, the CSCF servers buckle under our load, and then Seashell becomes slow or inaccessible at times. Or maybe, since you worked hard on all your assignments, you just want to keep a copy of your them. Here&rsquo;s how to get your files from Seashell, even if Seashell is down.</p>
-<footer class="read-more"><a href="/blog/2015/03/24/how-to-access-seashell-files/">&hellip;more&hellip;</a></footer>
+<p>Mitigation includes changing your password as soon as it gets reset. Although not practical, you could also not give out your birthday.</p>
+
+<p>On February 19, 2014, the vulnerability was eventually reported to a student trustee in the OCDSB, who was also a good friend. Eventually, the OCDSB contacted Career Cruising and the password system was overhauled. When I left, randomly generated passwords were distributed in-person from the guidance department.</p>
+
+<p>The passwords were probably stored in plain text. Oh well.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="https://cwang.me/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="https://cwang.me/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/2015/03/29/why-seashell-seems-to-suck/"><em>Why Seashell seems to suck</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
 </article>
         </div>
       </div>
@@ -149,7 +173,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-05-04T20:20:06 in 1484ms</p>
+        <p>Page generated 2015-05-04T20:20:06 in 1343ms</p>
       </footer>
     </div>
     <!-- </body> JS -->

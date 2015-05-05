@@ -4,7 +4,28 @@
  <link rel="self" href="https://cwang.me/feeds/all.atom.xml" />
  <link href="https://cwang.me/index.html" />
  <id>urn:https-cwang-me:-index-html</id>
- <updated>2015-03-29T05:49:58Z</updated>
+ <updated>2015-05-04T23:42:33Z</updated>
+ <entry>
+  <title type="text">OCDSB Career Cruising: What are passwords?</title>
+  <link rel="alternate" href="https://cwang.me/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/?utm_source=all&amp;utm_medium=Atom" />
+  <id>urn:https-cwang-me:-blog-2015-05-04-ocdsb-career-cruising-what-are-passwords</id>
+  <published>2015-05-04T23:42:33Z</published>
+  <updated>2015-05-04T23:42:33Z</updated>
+  <author>
+   <name>The Unknown Author</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;From 2010 to 2015 at least, The Ottawa-Carleton District School Board used the eponymous course management system from &lt;a href="http://public.careercruising.com/en/"&gt;Career Cruising&lt;/a&gt;. It was a web application that let students view grades and register for courses in upcoming terms. There were management features as well that allowed guidance counselors (the high-school equivalent of academic advisors) to upload grades or something. The system worked fairly well, but up until 2014, your password would get reset to your birthday every year. This turned out to be a significant security flaw.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;Of course, every user had a password of the same format. And most users didn&amp;rsquo;t bother to change their password after the reset until they had to use the system again, which was much later. Birthdays are not private information. Despite my lack of experience I determined it was feasible to scrape birthdays from Facebook using their API. Additionally, usernames were student IDs, and the school computer system&amp;mdash;Windows XP computers on a domain&amp;mdash;had a handy tool, Active Directory Search, that allowed one to lookup student IDs just by searching someone&amp;rsquo;s name. Presumably this step could be automated as well.&lt;/p&gt;
+
+&lt;p&gt;The easiest way to exploit this is with a targeted attack. Once a birthday and student ID pair are obtained for one person, an attacker can register the student for useless courses. I suppose the worst case would be a delayed graduation, if the guidance department doesn&amp;rsquo;t step in to fix it. The attacker could also blackmail a student by threatening to disclose grades. On the other hand, a denial of service attack is also possible if a large number of student ID/birthday pairs are obtained, which would swamp the guidance department. With these possible attacks in mind, the flaw can be seen to be fairly severe.&lt;/p&gt;
+
+&lt;p&gt;Mitigation includes changing your password as soon as it gets reset. Although not practical, you could also not give out your birthday.&lt;/p&gt;
+
+&lt;p&gt;On February 19, 2014, the vulnerability was eventually reported to a student trustee in the OCDSB, who was also a good friend. Eventually, the OCDSB contacted Career Cruising and the password system was overhauled. When I left, randomly generated passwords were distributed in-person from the guidance department.&lt;/p&gt;
+
+&lt;p&gt;The passwords were probably stored in plain text. Oh well.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Why Seashell seems to suck</title>
   <link rel="alternate" href="https://cwang.me/blog/2015/03/29/why-seashell-seems-to-suck/?utm_source=all&amp;utm_medium=Atom" />
