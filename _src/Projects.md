@@ -12,6 +12,10 @@ Packaged python program for I/O testing, compatible with CS 136's testing format
 
 A from-scratch remake of the popular bukkit plugin DiscoSheep. It spawns dancing sheep, and I guess the disco part of it is that they change colour. Somehow it still works with Spigot.
 
+## [LoginSecurity-2](https://github.com/lenis0012/LoginSecurity-2)
+
+Over the summer, I contributed significantly to this bukkit plugin. It provides a separate authentication system for Minecraft servers that doesn't rely on Minecraft's own accounts, so that servers can link accounts to external forum accounts and such. Features I added included a better "lockout" feature to prevent unauthenticated players from doing anything, and to prevent them from getting killed. There were a lot of potential vectors to exploit since Minecraft is such a complicated game but I eventually worked out a nice implementation. I also added support for bcrypt password storage--a lot better than SHA or even MD5 that they had before!
+
 ## [latex-fontawesome](https://github.com/Gibstick/latex-fontawesome)
 
 A fork of an [outdated original](https://github.com/furl/latex-fontawesome), which itself was an update of another older version. It provides FontAwesome icons in XeLaTeX. Didn't really do much for this one.
