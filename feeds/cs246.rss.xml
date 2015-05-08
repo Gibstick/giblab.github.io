@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>My Awesome Blog: Posts tagged 'cs246'</title>
+  <description>My Awesome Blog: Posts tagged 'cs246'</description>
+  <link>https://cwang.me/tags/cs246.html</link>
+  <lastBuildDate>Fri, 08 May 2015 19:25:06 UT</lastBuildDate>
+  <pubDate>Fri, 08 May 2015 19:25:06 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>My CS 246/136 workflow, or how to fork a git repository</title>
+   <link>https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/?utm_source=cs246&amp;utm_medium=RSS</link>
+   <guid>urn:https-cwang-me:-blog-2015-05-08-my-cs-246-136-workflow-or-how-to-fork-a-git-repository</guid>
+   <pubDate>Fri, 08 May 2015 19:25:06 UT</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;The instructions for CS 246 are quite simple: clone the course repository so that you have your own local copy, and then pull from it periodically while committing to it for your own assignments. This is fine, but then you have to resort to rsync or scp to keep files synchronized between the linux.student.cs servers and your own computer; realistically, not everyone wants to ssh in and use vim. These instructions will show you how to have your own local repository that you can sync with a remote one using only git, which I find quite convenient. I used this for CS 136 and I&amp;rsquo;m using it now for CS 246.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;The goal here is to have a central repository of sorts, just for synchronization. It replicates GitHub&amp;rsquo;s &amp;ldquo;fork&amp;rdquo; functionality by giving you your own remote repository that you can push to. This is desirable because syncing files becomes a simple git pull/git push (and maybe a merge or two), and the student environment servers have good &lt;a href="http://math.uwaterloo.ca/math-faculty-computing-facility/recover-files"&gt;backups&lt;/a&gt; and uptime&amp;mdash;they likely won&amp;rsquo;t fail completely, unlike your cheap laptop. Also, if the student environment goes down, it&amp;rsquo;s not your responsibility to fix it (ie. courses will make accommodations for it), unlike your laptop.&lt;/p&gt;
+
+&lt;p&gt;First set up a bare clone of the repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd ~/cs246
+git clone --bare https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then clone it again for your own working copy of it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone 1155.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;On your own computer, clone using ssh from your own bare repository. Don&amp;rsquo;t forget to clone from the bare repository; note that by convention bare repositories are appended with .git.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then in both systems, you need to add an &amp;ldquo;upstream&amp;rdquo; URL so that you can fetch and pull from the offical course repository. The name doesn&amp;rsquo;t have to be upstream, but remember to use the correct name in the other commands.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git remote add upstream https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now to &amp;ldquo;pull from upstream&amp;rdquo; you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git fetch upstream
+git merge upstream/master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To synchronize files between your computer and the linux.student.cs servers, use git pull/push. For example, you could be working on assignment and finish part of it in one night. You commit and push. Then the next day you can go to a computer lab, log in, and pull to resume work from where you left off. Of course, this workflow is also compatible with other workflows such as the &lt;a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow"&gt;feature branch workflow&lt;/a&gt;, but it might be overkill for assignments.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
