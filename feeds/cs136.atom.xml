@@ -68,7 +68,7 @@ git merge upstream/master&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Don&amp;rsquo;t blame the people who work hard on Seashell. It&amp;rsquo;s a lot better than what came before: RunC in VirtualBox. VirtualBox is mediocre at best, and it&amp;rsquo;s an absolutely horrible experience on low-end computers. Before that, they just told people to code with a terminal&lt;a href="https://www.reddit.com/r/uwaterloo/comments/3021ga/am_i_the_only_one_who_thinks_cs_136_has_been_a/cpp5qse"&gt;(3)&lt;/a&gt; (it&amp;rsquo;s that hacker thing with all the text and commands), which probably scared away a lot of people. Seashell is nice and it abstracts away all these messy details.&lt;/p&gt;
 
-&lt;p&gt;In a later post I&amp;rsquo;ll cover my CS 136 workflow. I didn&amp;rsquo;t actually use Seashell that, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.&lt;/p&gt;&lt;/html&gt;</content></entry>
+&lt;p&gt;In a later post I&amp;rsquo;ll cover my CS 136 workflow. I didn&amp;rsquo;t actually use Seashell that often, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">How to access Seashell files</title>
   <link rel="alternate" href="https://cwang.me/blog/2015/03/24/how-to-access-seashell-files/?utm_source=cs136&amp;utm_medium=Atom" />

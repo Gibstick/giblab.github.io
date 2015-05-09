@@ -19,4 +19,4 @@ For some reason, when Marmoset stops testing, the web servers get slow. When thi
 
 Don't blame the people who work hard on Seashell. It's a lot better than what came before: RunC in VirtualBox. VirtualBox is mediocre at best, and it's an absolutely horrible experience on low-end computers. Before that, they just told people to code with a terminal[(3)](https://www.reddit.com/r/uwaterloo/comments/3021ga/am_i_the_only_one_who_thinks_cs_136_has_been_a/cpp5qse) (it's that hacker thing with all the text and commands), which probably scared away a lot of people. Seashell is nice and it abstracts away all these messy details.
 
-In a later post I'll cover my CS 136 workflow. I didn't actually use Seashell that, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.
+In a later post I'll cover my CS 136 workflow. I didn't actually use Seashell that often, since I wanted to learn and get used to certain things that would be required for later courses and programming industry in general.
