@@ -22,9 +22,9 @@ function runTrials(num_trials, min_num, max_num, strat) {
     var prof = randBetween(min_num, max_num);
     var allan = randBetween(min_num, max_num);
     var beth = strat(allan, min_num, max_num);
-    num_occurrences[0] += (Math.abs(allan - prof) > Math.abs(beth - prof));
+    num_occurrences[0] += (Math.abs(allan - prof) < Math.abs(beth - prof));
     num_occurrences[1] += (Math.abs(allan - prof) == Math.abs(beth - prof));
-    num_occurrences[2] += (Math.abs(allan - prof) < Math.abs(beth - prof));
+    num_occurrences[2] += (Math.abs(allan - prof) > Math.abs(beth - prof));
   }
 
   return num_occurrences.map(function(x) {
