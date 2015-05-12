@@ -3,6 +3,7 @@
  * Returns a random integer in [min, max]
  */
 function randBetween(min, max) {
+  max++;
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
@@ -20,10 +21,10 @@ function runTrials(num_trials, min_num, max_num, strat) {
   for (var i = 0; i < num_trials; i++) {
     var prof = randBetween(min_num, max_num);
     var allan = randBetween(min_num, max_num);
-    var betty = strat(allan, min_num, max_num);
-    num_occurrences[0] += (Math.abs(allan - prof) > Math.abs(betty - prof));
-    num_occurrences[1] += (Math.abs(allan - prof) == Math.abs(betty - prof));
-    num_occurrences[2] += (Math.abs(allan - prof) < Math.abs(betty - prof));
+    var beth = strat(allan, min_num, max_num);
+    num_occurrences[0] += (Math.abs(allan - prof) > Math.abs(beth - prof));
+    num_occurrences[1] += (Math.abs(allan - prof) == Math.abs(beth - prof));
+    num_occurrences[2] += (Math.abs(allan - prof) < Math.abs(beth - prof));
   }
 
   return num_occurrences.map(function(x) {
