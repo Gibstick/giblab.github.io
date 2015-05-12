@@ -56,4 +56,6 @@ function runSim(){
   document.getElementById("prob-80").innerHTML = results[0];
   document.getElementById("prob-85").innerHTML = results[1];
   document.getElementById("prob-90").innerHTML = results[2];
+
+  document.getElementById("results-average").innerHTML = results[0]*80 + results[1] * 85 + results[2] * 90;
 }

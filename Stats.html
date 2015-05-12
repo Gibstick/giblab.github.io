@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <title>Stat 230 Problem 2.8 Simulation</title>
-    <meta name="description" content="Stat 230 Problem 2.8 Simulation: This page lets you write out the body of a function that implements a strategy for the below secenario, and then quickly test it by running a simulation with a given number of trials. Anonymous professor X has an integer (...">
+    <meta name="description" content=".mono-addon {  font-family: monospace;  } Stat 230 Problem 2.8 Simulation: This page lets you write out the body of a function that implements a strategy for the below secenario, and then quickly test it by running a simulation with a given number of tria...">
     <meta name="author"      content="The Unknown Author">
     <meta name="keywords"    content="">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -94,7 +94,8 @@
 
 
 <p> 
- <script src="/js/problem-2.8.js"></script></p>
+ <script src="/js/problem-2.8.js"></script>  
+ <style> .mono-addon {  font-family: monospace;  }</style></p>
 
 <h1 id="stat-230-problem-28-simulation">Stat 230 Problem 2.8 Simulation</h1>
 
@@ -102,16 +103,22 @@
 
 <p style="margin-left:2em">Anonymous professor X has an integer (1 ≤ m ≤ 9) in mind and asks two students, Allan and Beth to pick numbers between 1 and 9. Whichever is closer to m gets 90% and the other 80% in STAT 230. If they are equally close, they both get 85%. If the professor’s number and that of Allan are chosen purely at random and Allen announces his number out loud, describe a sample space and a strategy which leads Beth to the highest possible mark.</p>
 
-<p>The function you supply takes 3 parameters: <em>n</em>, Allan&rsquo;s number, and [<em>min</em>, <em>max</em>], the range containing the professor&rsquo;s number. The function can make use of randBetween(a, b) which returns a random integer from the range [<em>a</em>, <em>b</em>].</p>
+<p>The function you supply takes 3 parameters:</p>
+
+<ul>
+ <li><em>n</em>: Allan&rsquo;s number</li>
+ <li><em>min</em>, <em>max</em>: the inclusive range containing the professor&rsquo;s number.</li></ul>
+
+<p>The function can make use of <code>randBetween(a, b)</code> which returns a random integer from the range [<em>a</em>, <em>b</em>].</p>
 
 <p> 
- <div>
-  <form id="sim-params" name="sim-params">
-   <div class="form-group">
-    <label for="function-body">Function body in JS:</label>
-    <div class="input-group"><span class="input-group-addon">function bethStrategy(n, min, max) {</span>
-     <input type="text" id="function-body" class="form-control" placeholder="return n;" /><span class="input-group-addon">}</span></div></div></form>
-  <form class="form-inline">
+ <form id="sim-params" name="sim-params" onsubmit="runSim(); return false;">
+  <div class="form-group">
+   <label for="function-body">Function body in JS:</label>
+   <br />
+   <div class="input-group" style="min-width:480px"><span class="input-group-addon mono-addon">function bethStrategy(n, min, max) {</span>
+    <input type="text" id="function-body" class="form-control" placeholder="return n;" /><span class="input-group-addon mono-addon">}</span></div></div>
+  <div class="form-inline">
    <div class="form-group">
     <label for="num-trials">Number of trials (fewer than 1m):</label>
     <input type="number" id="num-trials" class="form-control" placeholder="10000" min="1" max="1000000" /></div>
@@ -122,13 +129,13 @@
     <label for="max-num">Max:</label>
     <input type="number" id="max-num" class="form-control" placeholder="9" /></div>
    <div class="button">
-    <button type="button" class="btn btn-primary" onclick="runSim();">Run Simulation</button></div></form></div></p>
+    <button type="submit" class="btn btn-primary">Run Simulation</button></div></div></form></p>
 
 <h2 id="results">Results</h2>
 
 <table class="table table-bordered table-hover narrowtable" id="results-table" style="max-width:200px">
  <tr>
-  <th>Outcome</th> 
+  <th>Outcome (Betty's Grade)</th> 
   <th>Probability</th></tr>
  <tr>
   <td>80%</td> 
@@ -141,6 +148,9 @@
  <tr>
   <td>90%</td> 
   <td id="prob-90"></td></tr></table>
+
+<p><strong>Expected value:</strong>
+ <results-average id="results-average"></results-average>%</p>
         </div>
       </div>
       <footer>
@@ -150,7 +160,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-05-11T20:23:33 in 1390ms</p>
+        <p>Page generated 2015-05-11T22:03:50 in 1234ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
