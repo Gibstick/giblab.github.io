@@ -1,4 +1,5 @@
  <script src="/js/problem-2.8.js"></script>
+
 # Stat 230 Problem 2.8 Simulation
 
 This page lets you write out the body of a function that implements a strategy for the below secenario, and then quickly test it by running a simulation with a given number of trials.
