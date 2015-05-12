@@ -18,13 +18,15 @@ The function you supply takes 3 parameters:
 
 The function can make use of <code>randBetween(a, b)</code> which returns a random integer from the range [*a*, *b*].
 
+The default strategy is to just pick randomly.
+
  <form id="sim-params" name="sim-params" onsubmit="runSim(); return false;">
     <div class="form-group">
       <label for="function-body">Function body in JS:</label><br/>
       <div class="input-group" style="min-width:480px">
         <span class="input-group-addon mono-addon">function bethStrategy(n, min, max) {</span>
         <input type="text" id="function-body" class=
-        "form-control" placeholder="return n;"/>
+        "form-control" placeholder="return randBetween(min, max);"/>
         <span class="input-group-addon mono-addon">}</span>
       </div>
     </div>

@@ -44,7 +44,7 @@ function customStrat(body) {
  * and runs the simulation
  */
 function runSim(){
-  var function_body = document.getElementById("function-body").value || "return n;";
+  var function_body = document.getElementById("function-body").value || "return randBetween(min, max);";
   var num_trials = document.getElementById("num-trials").value || 10000;
   if (num_trials > 100000) num_trials = 1000000;
   var min = document.getElementById("min-num").value || 1;

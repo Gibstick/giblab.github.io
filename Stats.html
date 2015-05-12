@@ -111,13 +111,15 @@
 
 <p>The function can make use of <code>randBetween(a, b)</code> which returns a random integer from the range [<em>a</em>, <em>b</em>].</p>
 
+<p>The default strategy is to just pick randomly.</p>
+
 <p> 
  <form id="sim-params" name="sim-params" onsubmit="runSim(); return false;">
   <div class="form-group">
    <label for="function-body">Function body in JS:</label>
    <br />
    <div class="input-group" style="min-width:480px"><span class="input-group-addon mono-addon">function bethStrategy(n, min, max) {</span>
-    <input type="text" id="function-body" class="form-control" placeholder="return n;" /><span class="input-group-addon mono-addon">}</span></div></div>
+    <input type="text" id="function-body" class="form-control" placeholder="return randBetween(min, max);" /><span class="input-group-addon mono-addon">}</span></div></div>
   <div class="form-inline">
    <div class="form-group">
     <label for="num-trials">Number of trials (fewer than 1m):</label>
@@ -160,7 +162,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-05-11T22:03:50 in 1234ms</p>
+        <p>Page generated 2015-05-11T22:09:03 in 1281ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
