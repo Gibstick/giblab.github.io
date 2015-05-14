@@ -1,4 +1,5 @@
 https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/
+https://cwang.me/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/
 https://cwang.me/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/
 https://cwang.me/blog/2015/03/29/why-seashell-seems-to-suck/
 https://cwang.me/blog/2015/03/24/how-to-access-seashell-files/

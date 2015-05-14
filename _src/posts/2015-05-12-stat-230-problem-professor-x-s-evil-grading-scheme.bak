@@ -1,0 +1,15 @@
+#lang scribble/manual
+
+Title: Stat 230 Problem: Professor X's evil grading scheme
+Date: 2015-05-12T16:52:54
+Tags: stat230, projects
+
+@verbatim{<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG'></script>}
+
+
+I found a really interesting problem in my STAT 230 course notes. Problem 2.8 on page 14 involves a cheeky and/or evil professor who decides to play a game with two of his students to determine their respective grades in STAT 230. The game is essentially to guess the professor's number, and to have a better guess than the other person. I found the problem fairly interesting, and although I lacked the theoretical knowledge to be able to solve it and prove that I had found an optimal solution, I knew I could code up a simulation and have fun doing it. [Here is what I came up with](http://cwang.me/Stats).
+
+
+<!-- more -->
+
+Test test
