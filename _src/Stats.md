@@ -7,6 +7,8 @@
 
 # Stat 230 Problem 2.8 Simulation
 
+See also [this blog post](http://cwang.me/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/).
+
 This page lets you write out the body of a function that implements a strategy for the below secenario, and then quickly test it by running a simulation with a given number of trials.
 
 <p style="margin-left:2em">Anonymous professor X has an integer (1 ≤ m ≤ 9) in mind and asks two students, Allan and Beth to pick numbers between 1 and 9. Whichever is closer to m gets 90% and the other 80% in STAT 230. If they are equally close, they both get 85%. If the professor’s number and that of Allan are chosen purely at random and Allen announces his number out loud, describe a sample space and a strategy which leads Beth to the highest possible mark.</p>
