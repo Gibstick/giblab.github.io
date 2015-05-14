@@ -10,32 +10,32 @@ The goal here is to have a central repository of sorts, just for synchronization
 
 First set up a bare clone of the repository.
 
-```
+```bash
 cd ~/cs246
 git clone --bare https://git.uwaterloo.ca/cs246/1155.git
 ```
 
 Then clone it again for your own working copy of it.
 
-```
+```bash
 git clone 1155.git
 ```
 
 On your own computer, clone using ssh from your own bare repository. Don't forget to clone from the bare repository; note that by convention bare repositories are appended with .git.
 
-```
+```bash
 git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git
 ```
 
 Then in both systems, you need to add an "upstream" URL so that you can fetch and pull from the offical course repository. The name doesn't have to be upstream, but remember to use the correct name in the other commands.
 
-```
+```bash
 git remote add upstream https://git.uwaterloo.ca/cs246/1155.git
 ```
 
 Now to "pull from upstream" you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.
 
-```
+```bash
 git fetch upstream
 git merge upstream/master
 ```
