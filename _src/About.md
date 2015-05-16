@@ -9,3 +9,6 @@ Computer games got me hooked on computers, which then led to scripting, programm
 [Naturally, I'm a gamer too (Steam)](http://steamcommunity.com/id/gibstick).
 
 Hope you enjoy the site.
+
+[Resume (pdf)](/d/Wang_resume_web.pdf).
+Contact: [charlie.wang[ᗅT]uwaterloo.ca](mailto:charlie.wang@uwaterloo.ca)

@@ -34,6 +34,6 @@ One possible strategy is given by
 
 with the code @pygment-code[#:lang "js"]{if (n < 5) return n + 1; if (n > 5) return n - 1; return n;}
 
-You can run it yourself a few times and see that it's a little better than randomly picking. Actually it's probably a lot better than randomly picking, because chances are if Beth tries to pick a ``random'' number herself it won't end up being that random. 
+You can run it yourself a few times and see that it's a little better than randomly picking. Plus the strategy is more feasible than picking randomly--it's hard to pick random numbers in your head, after all.
 
 What are some of your strategies for maximizing Beth's mark?

@@ -46,7 +46,7 @@
 &lt;div class="SIntrapara"&gt;
  &lt;pre class="brush: js"&gt;if (n &amp;lt; 5) return n + 1; if (n &amp;gt; 5) return n - 1; return n;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;You can run it yourself a few times and see that it&amp;rsquo;s a little better than randomly picking. Actually it&amp;rsquo;s probably a lot better than randomly picking, because chances are if Beth tries to pick a &amp;ldquo;random&amp;rdquo; number herself it won&amp;rsquo;t end up being that random.&lt;/p&gt;
+&lt;p&gt;You can run it yourself a few times and see that it&amp;rsquo;s a little better than randomly picking. Plus the strategy is more feasible than picking randomly&amp;ndash;it&amp;rsquo;s hard to pick random numbers in your head, after all.&lt;/p&gt;
 
 &lt;p&gt;What are some of your strategies for maximizing Beth&amp;rsquo;s mark?&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
