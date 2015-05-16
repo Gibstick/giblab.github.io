@@ -1,3 +1,4 @@
+@(local-require "custom_widgets.rkt")
 <article>
   <header>
     <h1>@|title|</h1>
@@ -8,6 +9,6 @@
     @older/newer-links[older-uri older-title newer-uri newer-title]
     @twitter-share-button[full-uri]
     @google-plus-share-button[full-uri]
-    @disqus-comments["cwang-me"]
+    @(intense-debate-comments "c1c2f91543c967f9fb025505f857f42e")
   </footer>
 </article>

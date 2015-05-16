@@ -1,1 +1,3 @@
 .frog/build
+_src/compiled/
+*.bak

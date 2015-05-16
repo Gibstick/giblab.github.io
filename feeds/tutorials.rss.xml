@@ -20,25 +20,30 @@
 
 &lt;p&gt;First set up a bare clone of the repository.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;cd ~/cs246
-git clone --bare https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;cd ~/cs246
+git clone --bare https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then clone it again for your own working copy of it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone 1155.git&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;git clone 1155.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;On your own computer, clone using ssh from your own bare repository. Don&amp;rsquo;t forget to clone from the bare repository; note that by convention bare repositories are appended with .git.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Then in both systems, you need to add an &amp;ldquo;upstream&amp;rdquo; URL so that you can fetch and pull from the offical course repository. The name doesn&amp;rsquo;t have to be upstream, but remember to use the correct name in the other commands.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git remote add upstream https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;git remote add upstream https://git.uwaterloo.ca/cs246/1155.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Now to &amp;ldquo;pull from upstream&amp;rdquo; you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git fetch upstream
-git merge upstream/master&lt;/code&gt;&lt;/pre&gt;
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;git fetch upstream
+git merge upstream/master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To synchronize files between your computer and the linux.student.cs servers, use git pull/push. For example, you could be working on assignment and finish part of it in one night. You commit and push. Then the next day you can go to a computer lab, log in, and pull to resume work from where you left off. Of course, this workflow is also compatible with other workflows such as the &lt;a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow"&gt;feature branch workflow&lt;/a&gt;, but it might be overkill for assignments.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>

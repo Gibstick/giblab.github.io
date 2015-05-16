@@ -110,25 +110,30 @@
 
 <p>First set up a bare clone of the repository.</p>
 
-<pre><code>cd ~/cs246
-git clone --bare https://git.uwaterloo.ca/cs246/1155.git</code></pre>
+<div class="brush: bash">
+ <pre><code>cd ~/cs246
+git clone --bare https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
 
 <p>Then clone it again for your own working copy of it.</p>
 
-<pre><code>git clone 1155.git</code></pre>
+<div class="brush: bash">
+ <pre><code>git clone 1155.git</code></pre></div>
 
 <p>On your own computer, clone using ssh from your own bare repository. Don&rsquo;t forget to clone from the bare repository; note that by convention bare repositories are appended with .git.</p>
 
-<pre><code>git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git</code></pre>
+<div class="brush: bash">
+ <pre><code>git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git</code></pre></div>
 
 <p>Then in both systems, you need to add an &ldquo;upstream&rdquo; URL so that you can fetch and pull from the offical course repository. The name doesn&rsquo;t have to be upstream, but remember to use the correct name in the other commands.</p>
 
-<pre><code>git remote add upstream https://git.uwaterloo.ca/cs246/1155.git</code></pre>
+<div class="brush: bash">
+ <pre><code>git remote add upstream https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
 
 <p>Now to &ldquo;pull from upstream&rdquo; you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.</p>
 
-<pre><code>git fetch upstream
-git merge upstream/master</code></pre>
+<div class="brush: bash">
+ <pre><code>git fetch upstream
+git merge upstream/master</code></pre></div>
 
 <p>To synchronize files between your computer and the linux.student.cs servers, use git pull/push. For example, you could be working on assignment and finish part of it in one night. You commit and push. Then the next day you can go to a computer lab, log in, and pull to resume work from where you left off. Of course, this workflow is also compatible with other workflows such as the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">feature branch workflow</a>, but it might be overkill for assignments.</p>
   <footer>
@@ -158,17 +163,13 @@ git merge upstream/master</code></pre>
       "Tweet"</a>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <g:plusone size="medium" href="https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/"></g:plusone>
-    <script type="text/javascript">
-      var disqus_shortname = 'cwang-me';
-      (function() {
-          var dsq = document.createElement('script');
-          dsq.type = 'text/javascript';
-          dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
+    <script>
+      var idcomments_acct = 'c1c2f91543c967f9fb025505f857f42e';
+      var idcomments_post_id;
+      var idcomments_post_url;
     </script>
-    <div id="disqus_thread"></div>
+    <span id="IDCommentsPostTitle" style="display:none"></span>
+    <script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
   </footer>
 </article>
         </div>
@@ -180,7 +181,7 @@ git merge upstream/master</code></pre>
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-05-13T22:16:07 in 2343ms</p>
+        <p>Page generated 2015-05-15T21:14:05 in 1390ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
