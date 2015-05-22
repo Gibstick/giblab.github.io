@@ -7,6 +7,8 @@ We all love Seashell, because the only course-sanctioned alternative would be to
 
 You can also delete the object (.o) files from Seashell this way, because you currently can't do that through Seashell itself. You might need this for A10.
 
+Edit: Unfortunately this only works on-campus or from the [campus VPN](https://uwaterloo.ca/information-systems-technology/services/virtual-private-network-vpn/about-virtual-private-network-vpn).
+
 Windows Users
 =============
 

@@ -153,6 +153,8 @@ git merge upstream/master&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;You can also delete the object (.o) files from Seashell this way, because you currently can&amp;rsquo;t do that through Seashell itself. You might need this for A10.&lt;/p&gt;
 
+&lt;p&gt;Edit: Unfortunately this only works on-campus or from the &lt;a href="https://uwaterloo.ca/information-systems-technology/services/virtual-private-network-vpn/about-virtual-private-network-vpn"&gt;campus VPN&lt;/a&gt;.&lt;/p&gt;
+
 &lt;h1 id="windows-users"&gt;Windows Users&lt;/h1&gt;
 
 &lt;ol&gt;
