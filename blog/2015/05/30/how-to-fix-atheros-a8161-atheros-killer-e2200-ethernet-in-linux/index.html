@@ -5,15 +5,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Stat 230 Problem: Professor X ' s evil grading scheme</title>
-    <meta name="description" content=":  I found a really interesting problem in my STAT 230 course notes. Problem 2.8 on page 14 involves a cheeky and/or evil professor who decides to play a game with two of his students to determine their respective grades in STAT 230. The game is essential...">
+    <title>How to fix Atheros A8161 / Atheros Killer E2200 Ethernet in Linux</title>
+    <meta name="description" content="I just spent a significant number of hours trying to fix the Ethernet card in my MSI GS60 laptop on Ubuntu 15.04. Turns out there's a bug in the drivers that's been around since February (!), and it's still present on version 4.0.4 of the kernel. The work...">
     <meta name="author"      content="The Unknown Author">
-    <meta name="keywords"    content="stat230, projects">
+    <meta name="keywords"    content="tutorials, linux">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://cwang.me/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">
-    <link rel="next" href="/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/">
-    <link rel="prev" href="/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/">
+    <link rel="canonical" href="https://cwang.me/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/">
+    <link rel="next" href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -100,53 +100,31 @@
 
           <article>
   <header>
-    <h1>Stat 230 Problem: Professor X &rsquo; s evil grading scheme</h1>
+    <h1>How to fix Atheros A8161 / Atheros Killer E2200 Ethernet in Linux</h1>
     <p class='date-and-tags'>
-<time datetime="2015-05-12" pubdate="true">2015-05-12</time> :: <span class="tags"><a href="/tags/stat230.html">stat230</a>, <a href="/tags/projects.html">projects</a></span></p>
+<time datetime="2015-05-30" pubdate="true">2015-05-30</time> :: <span class="tags"><a href="/tags/tutorials.html">tutorials</a>, <a href="/tags/linux.html">linux</a></span></p>
   </header>
 
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG.js" type="text/javascript"></script>
+<p>I just spent a significant number of hours trying to fix the Ethernet card in my MSI GS60 laptop on Ubuntu 15.04. Turns out there&rsquo;s a <a href="https://bugzilla.kernel.org/show_bug.cgi?id=70761">bug in the drivers</a> that&rsquo;s been around since February (!), and it&rsquo;s still present on version 4.0.4 of the kernel. The workaround is to set the MTU to 8192. This works for both the A8161 and the E2200 card. Assuming you&rsquo;re on eth0,</p>
 
-<h1><a name="(part._)"></a></h1>
+<div class="brush: console">
+ <pre><code>sudo ifconfig eth0 mtu 8192</code></pre></div>
+<!-- more-->
 
-<p>I found a really interesting problem in my STAT 230 course notes. Problem 2.8 on page 14 involves a cheeky and/or evil professor who decides to play a game with two of his students to determine their respective grades in STAT 230. The game is essentially to guess the professor&rsquo;s number, and to have a better guess than the other person. I found the problem fairly interesting, and although I lacked the theoretical knowledge to be able to solve it and prove that I had found an optimal solution, I knew I could code up a simulation and have fun doing it. <a href="http://cwang.me/Stats">Here is what I came up with</a>.</p>
-<!--more-->
+<p>Note that the <a href="https://forum-en.msi.com/index.php?topic=168097.0">bug report</a> is for the A8161 card. The MSI GS60 has the Killer E2200 card. <code>lspci</code> (on Ubuntu 15.04, but likely any other distro) identifies it as</p>
 
-<h2><a name="(part._.The_problem)"></a>The problem</h2>
+<div class="brush: console">
+ <pre><code>$ lspci | grep -i net
+Ethernet controller: Qualcomm Atheros Killer E220x Gigabit Ethernet Controller (rev 13)</code></pre></div>
 
-<p><span style="font-style: italic">Anonymous professor X has an integer \((1 \leq m \leq 9)\) in mind and asks two students, Allan and Beth to pick numbers between 1 and 9. Whichever is closer to m gets 90% and the other 80% in STAT 230. If they are equally close, they both get 85%. If the professor&#8217;s number and that of Allan are chosen purely at random and Allan announces his number out loud, describe a sample space and a strategy which leads Beth to the highest possible mark.</span></p>
+<p>But it turns out that <a href="https://forum-en.msi.com/index.php?topic=168097.0">people have been using AR8161 drivers for this card on Windows</a>. I guess the drivers for these cards are similar enough that the bug exists for the E2200, and the workaround works too.</p>
 
-<h2><a name="(part._.Strategies)"></a>Strategies</h2>
-
-<p>The simulation repeats the game a few thousand times to determine the expected value of Beth&rsquo;s mark. The question asks for us to find a strategy for picking a number, given Allan&rsquo;s number, that maximizes Beth&rsquo;s mark. Trivially, if Beth only wanted to avoid the worst case, then picking the same number as Allan every time would guarantee this.</p>
-
-<p>One possible strategy is given by</p>
-
-<p>\[f(n) = \left\{
-     \begin{array}{lr}
-       n + 1 &amp; : n &lt; 5 \\
-       n     &amp; : n = 5 \\
-       n - 1 &amp; : n &gt; 5
-     \end{array}
-  \right.\]</p>
-
-<p></p>
-
-<div class="SIntrapara">with the code </div>
-
-<div class="SIntrapara">
- <pre class="brush: js">if (n &lt; 5) return n + 1; if (n &gt; 5) return n - 1; return n;</pre></div>
-
-<p>You can run it yourself a few times and see that it&rsquo;s a little better than randomly picking. Plus the strategy is more feasible than picking randomly&ndash;it&rsquo;s hard to pick random numbers in your head, after all.</p>
-
-<p>What are some of your strategies for maximizing Beth&rsquo;s mark?</p>
+<p>Hopefully this will save you a lot of trouble.</p>
   <footer>
     <ul class="pager">
-    <li class="previous">
-      <a href="/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/">&larr; <em>How to fix Atheros A8161 / Atheros Killer E2200 Ethernet in Linux</em></a>
-    </li>
+
     <li class="next">
-      <a href="/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/"><em>My CS 246/136 workflow, or how to fork a git repository</em> &rarr;</a>
+      <a href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/"><em>Stat 230 Problem: Professor X &rsquo; s evil grading scheme</em> &rarr;</a>
     </li>
     </ul>
     <script type="text/javascript">
@@ -162,7 +140,7 @@
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="https://cwang.me/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/"
+       data-url="https://cwang.me/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/"
        data-dnt="true">
       "Tweet"</a>
     <div id="mathjax-shortcut">
@@ -185,7 +163,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-05-30T21:42:30 in 1256ms</p>
+        <p>Page generated 2015-05-30T21:43:34 in 712ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
