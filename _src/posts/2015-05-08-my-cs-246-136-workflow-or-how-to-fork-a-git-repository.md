@@ -8,6 +8,8 @@ The instructions for CS 246 are quite simple: clone the course repository so tha
 
 The goal here is to have a central repository of sorts, just for synchronization. It replicates GitHub's "fork" functionality by giving you your own remote repository that you can push to. This is desirable because syncing files becomes a simple git pull/git push (and maybe a merge or two), and the student environment servers have good [backups](http://math.uwaterloo.ca/math-faculty-computing-facility/recover-files) and uptime--they likely won't fail completely, unlike your cheap laptop. Also, if the student environment goes down, it's not your responsibility to fix it (ie. courses will make accommodations for it), unlike your laptop.
 
+If you haven't set up SSH keys yet, I recommend you do so first. The [Ubuntu docs](https://help.ubuntu.com/community/SSH/OpenSSH/Keys) are a good guide. If you have SSH keys set up, replace the HTTPS URLs below with the corresponding SSH ones.
+
 First set up a bare clone of the repository.
 
 ```bash

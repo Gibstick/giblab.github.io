@@ -5,15 +5,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>My CS 246/136 workflow, or how to fork a git repository</title>
-    <meta name="description" content="The instructions for CS 246 are quite simple: clone the course repository so that you have your own local copy, and then pull from it periodically while committing to it for your own assignments. This is fine, but then you have to resort to rsync or scp t...">
+    <title>How to fix Mumble overlay in TF2 (Windows)</title>
+    <meta name="description" content="Run TF2 with as an administrator. In the properties dialog for hl2.exe (usually under `C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2` these days), navigate to the compatibility tab and tick the option under the compatibility tab.  This isn...">
     <meta name="author"      content="The Unknown Author">
-    <meta name="keywords"    content="cs136, cs246, tutorials">
+    <meta name="keywords"    content="tutorials">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/">
-    <link rel="next" href="/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/">
-    <link rel="prev" href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">
+    <link rel="canonical" href="https://cwang.me/blog/2015/06/20/how-to-fix-mumble-overlay-in-tf2-windows/">
+    <link rel="next" href="/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -100,53 +100,22 @@
 
           <article>
   <header>
-    <h1>My CS 246/136 workflow, or how to fork a git repository</h1>
+    <h1>How to fix Mumble overlay in TF2 (Windows)</h1>
     <p class='date-and-tags'>
-<time datetime="2015-05-08" pubdate="true">2015-05-08</time> :: <span class="tags"><a href="/tags/cs136.html">cs136</a>, <a href="/tags/cs246.html">cs246</a>, <a href="/tags/tutorials.html">tutorials</a></span></p>
+<time datetime="2015-06-20" pubdate="true">2015-06-20</time> :: <span class="tags"><a href="/tags/tutorials.html">tutorials</a></span></p>
   </header>
 
-<p>The instructions for CS 246 are quite simple: clone the course repository so that you have your own local copy, and then pull from it periodically while committing to it for your own assignments. This is fine, but then you have to resort to rsync or scp to keep files synchronized between the linux.student.cs servers and your own computer; realistically, not everyone wants to ssh in and use vim. These instructions will show you how to have your own local repository that you can sync with a remote one using only git, which I find quite convenient. I used this for CS 136 and I&rsquo;m using it now for CS 246.</p>
+<p>Run TF2 with as an administrator. In the properties dialog for hl2.exe (usually under <code>C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2</code> these days), navigate to the compatibility tab and tick the option under the compatibility tab.</p>
+
+<p>This isn&rsquo;t the ideal solution but it&rsquo;s the only workaround that&rsquo;s worked for me. You don&rsquo;t need to hack around your graphics settings, such as -dxlevel or -nod3dex in TF2&rsquo;s command line options. Of course you should evaluate the risks of doing this and consider whether it&rsquo;s worth the risk to have a Mumble overlay.</p>
+
+<p>What I find weird is how TF2 needs more permissions, not Mumble. Maybe someone more knowledgeable can dig around and find out why.</p>
 <!-- more-->
-
-<p>The goal here is to have a central repository of sorts, just for synchronization. It replicates GitHub&rsquo;s &ldquo;fork&rdquo; functionality by giving you your own remote repository that you can push to. This is desirable because syncing files becomes a simple git pull/git push (and maybe a merge or two), and the student environment servers have good <a href="http://math.uwaterloo.ca/math-faculty-computing-facility/recover-files">backups</a> and uptime&mdash;they likely won&rsquo;t fail completely, unlike your cheap laptop. Also, if the student environment goes down, it&rsquo;s not your responsibility to fix it (ie. courses will make accommodations for it), unlike your laptop.</p>
-
-<p>If you haven&rsquo;t set up SSH keys yet, I recommend you do so first. The <a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">Ubuntu docs</a> are a good guide. If you have SSH keys set up, replace the HTTPS URLs below with the corresponding SSH ones.</p>
-
-<p>First set up a bare clone of the repository.</p>
-
-<div class="brush: bash">
- <pre><code>cd ~/cs246
-git clone --bare https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
-
-<p>Then clone it again for your own working copy of it.</p>
-
-<div class="brush: bash">
- <pre><code>git clone 1155.git</code></pre></div>
-
-<p>On your own computer, clone using ssh from your own bare repository. Don&rsquo;t forget to clone from the bare repository; note that by convention bare repositories are appended with .git.</p>
-
-<div class="brush: bash">
- <pre><code>git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git</code></pre></div>
-
-<p>Then in both systems, you need to add an &ldquo;upstream&rdquo; URL so that you can fetch and pull from the offical course repository. The name doesn&rsquo;t have to be upstream, but remember to use the correct name in the other commands.</p>
-
-<div class="brush: bash">
- <pre><code>git remote add upstream https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
-
-<p>Now to &ldquo;pull from upstream&rdquo; you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.</p>
-
-<div class="brush: bash">
- <pre><code>git fetch upstream
-git merge upstream/master</code></pre></div>
-
-<p>To synchronize files between your computer and the linux.student.cs servers, use git pull/push. For example, you could be working on assignment and finish part of it in one night. You commit and push. Then the next day you can go to a computer lab, log in, and pull to resume work from where you left off. Of course, this workflow is also compatible with other workflows such as the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">feature branch workflow</a>, but it might be overkill for assignments.</p>
   <footer>
     <ul class="pager">
-    <li class="previous">
-      <a href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">&larr; <em>Stat 230 Problem: Professor X &rsquo; s evil grading scheme</em></a>
-    </li>
+
     <li class="next">
-      <a href="/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/"><em>OCDSB Career Cruising: What are passwords?</em> &rarr;</a>
+      <a href="/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/"><em>How to fix Atheros A8161 / Atheros Killer E2200 Ethernet in Linux</em> &rarr;</a>
     </li>
     </ul>
     <script type="text/javascript">
@@ -162,7 +131,7 @@ git merge upstream/master</code></pre></div>
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/"
+       data-url="https://cwang.me/blog/2015/06/20/how-to-fix-mumble-overlay-in-tf2-windows/"
        data-dnt="true">
       "Tweet"</a>
     <div id="mathjax-shortcut">
@@ -185,7 +154,7 @@ git merge upstream/master</code></pre></div>
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-06-20T02:25:11 in 1265ms</p>
+        <p>Page generated 2015-06-20T02:23:58 in 1390ms</p>
       </footer>
     </div>
     <!-- </body> JS -->

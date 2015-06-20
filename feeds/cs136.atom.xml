@@ -19,6 +19,8 @@
 
 &lt;p&gt;The goal here is to have a central repository of sorts, just for synchronization. It replicates GitHub&amp;rsquo;s &amp;ldquo;fork&amp;rdquo; functionality by giving you your own remote repository that you can push to. This is desirable because syncing files becomes a simple git pull/git push (and maybe a merge or two), and the student environment servers have good &lt;a href="http://math.uwaterloo.ca/math-faculty-computing-facility/recover-files"&gt;backups&lt;/a&gt; and uptime&amp;mdash;they likely won&amp;rsquo;t fail completely, unlike your cheap laptop. Also, if the student environment goes down, it&amp;rsquo;s not your responsibility to fix it (ie. courses will make accommodations for it), unlike your laptop.&lt;/p&gt;
 
+&lt;p&gt;If you haven&amp;rsquo;t set up SSH keys yet, I recommend you do so first. The &lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;Ubuntu docs&lt;/a&gt; are a good guide. If you have SSH keys set up, replace the HTTPS URLs below with the corresponding SSH ones.&lt;/p&gt;
+
 &lt;p&gt;First set up a bare clone of the repository.&lt;/p&gt;
 
 &lt;div class="brush: bash"&gt;

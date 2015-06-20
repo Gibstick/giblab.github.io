@@ -4,9 +4,21 @@
   <title>My Awesome Blog: Posts tagged 'tutorials'</title>
   <description>My Awesome Blog: Posts tagged 'tutorials'</description>
   <link>https://cwang.me/tags/tutorials.html</link>
-  <lastBuildDate>Sun, 31 May 2015 01:24:21 UT</lastBuildDate>
-  <pubDate>Sun, 31 May 2015 01:24:21 UT</pubDate>
+  <lastBuildDate>Sat, 20 Jun 2015 06:17:58 UT</lastBuildDate>
+  <pubDate>Sat, 20 Jun 2015 06:17:58 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>How to fix Mumble overlay in TF2 (Windows)</title>
+   <link>https://cwang.me/blog/2015/06/20/how-to-fix-mumble-overlay-in-tf2-windows/?utm_source=tutorials&amp;utm_medium=RSS</link>
+   <guid>urn:https-cwang-me:-blog-2015-06-20-how-to-fix-mumble-overlay-in-tf2-windows</guid>
+   <pubDate>Sat, 20 Jun 2015 06:17:58 UT</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;Run TF2 with as an administrator. In the properties dialog for hl2.exe (usually under &lt;code&gt;C:\Program Files (x86)\Steam\steamapps\common\Team Fortress 2&lt;/code&gt; these days), navigate to the compatibility tab and tick the option under the compatibility tab.&lt;/p&gt;
+
+&lt;p&gt;This isn&amp;rsquo;t the ideal solution but it&amp;rsquo;s the only workaround that&amp;rsquo;s worked for me. You don&amp;rsquo;t need to hack around your graphics settings, such as -dxlevel or -nod3dex in TF2&amp;rsquo;s command line options. Of course you should evaluate the risks of doing this and consider whether it&amp;rsquo;s worth the risk to have a Mumble overlay.&lt;/p&gt;
+
+&lt;p&gt;What I find weird is how TF2 needs more permissions, not Mumble. Maybe someone more knowledgeable can dig around and find out why.&lt;/p&gt;
+&lt;!-- more--&gt;&lt;/html&gt;</description></item>
   <item>
    <title>How to fix Atheros A8161 / Atheros Killer E2200 Ethernet in Linux</title>
    <link>https://cwang.me/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/?utm_source=tutorials&amp;utm_medium=RSS</link>
@@ -38,6 +50,8 @@ Ethernet controller: Qualcomm Atheros Killer E220x Gigabit Ethernet Controller (
 &lt;!-- more--&gt;
 
 &lt;p&gt;The goal here is to have a central repository of sorts, just for synchronization. It replicates GitHub&amp;rsquo;s &amp;ldquo;fork&amp;rdquo; functionality by giving you your own remote repository that you can push to. This is desirable because syncing files becomes a simple git pull/git push (and maybe a merge or two), and the student environment servers have good &lt;a href="http://math.uwaterloo.ca/math-faculty-computing-facility/recover-files"&gt;backups&lt;/a&gt; and uptime&amp;mdash;they likely won&amp;rsquo;t fail completely, unlike your cheap laptop. Also, if the student environment goes down, it&amp;rsquo;s not your responsibility to fix it (ie. courses will make accommodations for it), unlike your laptop.&lt;/p&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t set up SSH keys yet, I recommend you do so first. The &lt;a href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys"&gt;Ubuntu docs&lt;/a&gt; are a good guide. If you have SSH keys set up, replace the HTTPS URLs below with the corresponding SSH ones.&lt;/p&gt;
 
 &lt;p&gt;First set up a bare clone of the repository.&lt;/p&gt;
 
