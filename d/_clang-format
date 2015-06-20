@@ -1,0 +1,8 @@
+Language: Cpp
+Standard: Cpp03
+BasedOnStyle: Google
+IndentWidth: 2
+ColumnLimit: 120
+TabWidth: 2
+UseTab: Never
+BreakBeforeBraces: Attach
