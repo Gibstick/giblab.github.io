@@ -4,7 +4,108 @@
  <link rel="self" href="https://cwang.me/feeds/cs246.atom.xml" />
  <link href="https://cwang.me/tags/cs246.html" />
  <id>urn:https-cwang-me:-tags-cs246-html</id>
- <updated>2015-05-08T19:25:06Z</updated>
+ <updated>2015-06-21T00:11:00Z</updated>
+ <entry>
+  <title type="text">Some tips for CS246 assignments</title>
+  <link rel="alternate" href="https://cwang.me/blog/2015/06/20/some-tips-for-cs246-assignments/?utm_source=cs246&amp;utm_medium=Atom" />
+  <id>urn:https-cwang-me:-blog-2015-06-20-some-tips-for-cs246-assignments</id>
+  <published>2015-06-21T00:11:00Z</published>
+  <updated>2015-06-21T00:11:00Z</updated>
+  <author>
+   <name>The Unknown Author</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;CS 246 is a complicated course. Anyone who says CS 246 is easy probably already knew everything in it. The tools and best practices outlined below are all things that will help you stay organized and become a better programmer in 246.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;h1 id="uml"&gt;UML&lt;/h1&gt;
+
+&lt;p&gt;If you hate doing layout by hand, you&amp;rsquo;ll appreciate &lt;a href="http://www.planttext.com/"&gt;PlantText&lt;/a&gt;, an online UML editor that renders very nice looking UML diagrams from a text format that basically resembles Java pseudocode.&lt;/p&gt;
+
+&lt;p&gt;The UML basics can be found in the provided samples in the dropdown menu above the editor, under &lt;strong&gt;Class Diagram&lt;/strong&gt;. Examples 1 and 2 are the most relevant.&lt;/p&gt;
+
+&lt;p&gt;To get rid of the icons and other spurious style features, put&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;skinparam classAttributeIconSize 0
+skinparam circledCharacterRadius 0
+skinparam circledCharacterFontSize 0&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in your UML text.&lt;/p&gt;
+
+&lt;h1 id="compiler-switches"&gt;Compiler switches&lt;/h1&gt;
+
+&lt;p&gt;Use these when compiling your code. Add them to your makefiles too, of course.&lt;/p&gt;
+
+&lt;h2 id="be-pedantic"&gt;Be pedantic&lt;/h2&gt;
+
+&lt;p&gt;When compiling, use the switch &lt;code&gt;-pedantic&lt;/code&gt;. It&amp;rsquo;ll turn on more warnings, and we&amp;rsquo;re most likely not going to get into weird edge cases where those warnings can be ignored. Warnings are good, because they often hint at a bug or something you didn&amp;rsquo;t intend to do. Only ignore them if you know what you&amp;rsquo;re doing (I almost never ignore warnings).&lt;/p&gt;
+
+&lt;h2 id="follow-a-standard"&gt;Follow a standard&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code&gt;-std=c++03&lt;/code&gt; because you don&amp;rsquo;t want to get caught using compiler extensions that they won&amp;rsquo;t support. For example, &lt;a href="https://gcc.gnu.org/onlinedocs/gcc/Variable-Length.html#Variable-Length"&gt;variable-length arrays&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="a-wall-of-warnings"&gt;A wall of warnings&lt;/h2&gt;
+
+&lt;p&gt;Use &lt;code&gt;-Wall&lt;/code&gt;. Enabling all warnings on an existing codebase is impractical but for our tiny programs it&amp;rsquo;s a good idea (see entry on pedantic mode above).&lt;/p&gt;
+
+&lt;h1 id="tools"&gt;Tools&lt;/h1&gt;
+
+&lt;h2 id="cppcheck"&gt;cppcheck&lt;/h2&gt;
+
+&lt;p&gt;Static analysis tools check your program for bugs without actually running them. An simple tool is &lt;a href="http://cppcheck.sourceforge.net/"&gt;cppcheck&lt;/a&gt;. It can check for a variety of errors. For example, it detected that I had forgotten to copy over a field in an assignment operator overload. It can also check for very simple memory leaks. Here&amp;rsquo;s a &lt;a href="http://sourceforge.net/p/cppcheck/wiki/ListOfChecks/"&gt;list of all the things it can check for&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="clang-analyze"&gt;clang-analyze&lt;/h2&gt;
+
+&lt;p&gt;Similar to cppcheck, &lt;a href="http://clang-analyzer.llvm.org/"&gt;clang-analyze&lt;/a&gt; is another command-line tool you can use to check your code for bugs. This one is already installed on the student environment along with clang. Use it by invoking &lt;a href="http://clang-analyzer.llvm.org/scan-build.html"&gt;scan-build&lt;/a&gt;. For example, it can find unused variables.&lt;/p&gt;
+
+&lt;p&gt;Usage: &lt;code&gt;scan-build make&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id="valgrind"&gt;Valgrind&lt;/h2&gt;
+
+&lt;p&gt;Valgrind was introduced to us as a memory leak checker but it can do a lot more than that. It can find memory errors in general, such as use-after-free, and using uninitialized memory. A full explanation of all the memory explanations can be found in the &lt;a href="http://valgrind.org/docs/manual/mc-manual.html#mc-manual.errormsgs"&gt;Valgrind docs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Don&amp;rsquo;t panic if Valgrind reports a memory &amp;ldquo;leak&amp;rdquo;, especially in a program that doesn&amp;rsquo;t allocate any memory explicitly. Near the end of the course, you&amp;rsquo;ll be linking to external libraries for your assignments, such as X11 for A4 and A5. These libraries, and even the C++ standard library aren&amp;rsquo;t as strict as CS 136/246 about freeing memory at exit, and Valgrind will notice. But this isn&amp;rsquo;t a memory &lt;em&gt;leak&lt;/em&gt; per se, because the OS will reclaim that memory anyway. This will show up in the heap summary as &amp;ldquo;in use at exit&amp;rdquo;, and in the leak summary as &amp;ldquo;still reachable&amp;rdquo;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ less valgrind.log
+==17073== Memcheck, a memory error detector
+==17073== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==17073== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==17073== Command: ./cc3k
+==17073== Parent PID: 16720
+==17073==
+==17073==
+==17073== HEAP SUMMARY:
+==17073==     in use at exit: 411,048 bytes in 183 blocks
+==17073==   total heap usage: 194 allocs, 11 frees, 415,292 bytes allocated
+==17073==
+==17073== LEAK SUMMARY:
+==17073==    definitely lost: 0 bytes in 0 blocks
+==17073==    indirectly lost: 0 bytes in 0 blocks
+==17073==      possibly lost: 0 bytes in 0 blocks
+==17073==    still reachable: 411,048 bytes in 183 blocks
+==17073==         suppressed: 0 bytes in 0 blocks
+==17073== Rerun with --leak-check=full to see details of leaked memory
+==17073==
+==17073== For counts of detected and suppressed errors, rerun with: -v
+==17073== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 2 from 2)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can safely ignore these, and Marmoset won&amp;rsquo;t flag these either. You can check exactly where these allocations are happening with &lt;code&gt;--leak-check=full&lt;/code&gt;, where you should see stack traces of library code and not your own.&lt;/p&gt;
+
+&lt;p&gt;Since Valgrind does slow your program down you can compile your program with some optimizations enabled with &lt;code&gt;-O1&lt;/code&gt;. The Valgrind docs will warn you that this can fudge up line numbers, but I haven&amp;rsquo;t seen this happen with my code.&lt;/p&gt;
+
+&lt;p&gt;Usage: &lt;code&gt;valgrind ./yourbinary&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id="a-better-runsuite"&gt;A Better runSuite&lt;/h2&gt;
+
+&lt;p&gt;To help catch obscure formatting errors, you can modify your runSuite script to print a diff of the test output compared to the expected output. I prefer the formatting of git diff, so I would modify my runSuite to run this upon failure:&lt;/p&gt;
+
+&lt;div class="brush: bash"&gt;
+ &lt;pre&gt;&lt;code&gt;git --no-pager diff --no-index "$actual" "$expected"&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you&amp;rsquo;re using git diff, the &lt;code&gt;--no-index&lt;/code&gt; switch is necessary because you don&amp;rsquo;t want to compare within a git tree. As well, &lt;code&gt;--no-pager&lt;/code&gt; prevents the command from running a pager like &lt;code&gt;less&lt;/code&gt;, which is useful because you&amp;rsquo;ll probably want to redirect the output somewhere yourself.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;What tips do you have for CS 246?&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">My CS 246/136 workflow, or how to fork a git repository</title>
   <link rel="alternate" href="https://cwang.me/blog/2015/05/08/my-cs-246-136-workflow-or-how-to-fork-a-git-repository/?utm_source=cs246&amp;utm_medium=Atom" />
