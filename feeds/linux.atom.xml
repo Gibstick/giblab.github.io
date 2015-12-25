@@ -17,14 +17,37 @@
 &lt;p&gt;I just spent a significant number of hours trying to fix the Ethernet card in my MSI GS60 laptop on Ubuntu 15.04. Turns out there&amp;rsquo;s a &lt;a href="https://bugzilla.kernel.org/show_bug.cgi?id=70761"&gt;bug in the drivers&lt;/a&gt; that&amp;rsquo;s been around since February (!), and it&amp;rsquo;s still present on version 4.0.4 of the kernel. The workaround is to set the MTU to 8192. This works for both the A8161 and the E2200 card. Assuming you&amp;rsquo;re on eth0,&lt;/p&gt;
 
 &lt;div class="brush: console"&gt;
- &lt;pre&gt;&lt;code&gt;sudo ifconfig eth0 mtu 8192&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="go"&gt;sudo ifconfig eth0 mtu 8192&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 &lt;!-- more--&gt;
 
 &lt;p&gt;Note that the &lt;a href="https://forum-en.msi.com/index.php?topic=168097.0"&gt;bug report&lt;/a&gt; is for the A8161 card. The MSI GS60 has the Killer E2200 card. &lt;code&gt;lspci&lt;/code&gt; (on Ubuntu 15.04, but likely any other distro) identifies it as&lt;/p&gt;
 
 &lt;div class="brush: console"&gt;
- &lt;pre&gt;&lt;code&gt;$ lspci | grep -i net
-Ethernet controller: Qualcomm Atheros Killer E220x Gigabit Ethernet Controller (rev 13)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="gp"&gt;$&lt;/span&gt; lspci &lt;span class="p"&gt;|&lt;/span&gt; grep -i net
+&lt;span class="go"&gt;Ethernet controller: Qualcomm Atheros Killer E220x Gigabit Ethernet Controller (rev 13)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
 
 &lt;p&gt;But it turns out that &lt;a href="https://forum-en.msi.com/index.php?topic=168097.0"&gt;people have been using AR8161 drivers for this card on Windows&lt;/a&gt;. I guess the drivers for these cards are similar enough that the bug exists for the E2200, and the workaround works too.&lt;/p&gt;
 

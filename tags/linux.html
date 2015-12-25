@@ -108,7 +108,18 @@
 <p>I just spent a significant number of hours trying to fix the Ethernet card in my MSI GS60 laptop on Ubuntu 15.04. Turns out there&rsquo;s a <a href="https://bugzilla.kernel.org/show_bug.cgi?id=70761">bug in the drivers</a> that&rsquo;s been around since February (!), and it&rsquo;s still present on version 4.0.4 of the kernel. The workaround is to set the MTU to 8192. This works for both the A8161 and the E2200 card. Assuming you&rsquo;re on eth0,</p>
 
 <div class="brush: console">
- <pre><code>sudo ifconfig eth0 mtu 8192</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="go">sudo ifconfig eth0 mtu 8192</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
 <footer class="read-more"><a href="/blog/2015/05/30/how-to-fix-atheros-a8161-atheros-killer-e2200-ethernet-in-linux/">&hellip;more&hellip;</a></footer>
 </article>
         </div>
@@ -120,7 +131,7 @@
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-08-01T00:13:03 in 2171ms</p>
+        <p>Page generated 2015-09-12T18:00:26 in 2676ms</p>
       </footer>
     </div>
     <!-- </body> JS -->

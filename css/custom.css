@@ -1,7 +1,7 @@
 /* custom.css */
 
 code {
-    color: black;
+    color: #222222;
 }
 
 /* When highlighted code blocks are too wide, they wrap. Resulting in the */
@@ -10,4 +10,5 @@ code {
 pre {
     white-space: pre;
     width: inherit;
+    color: #222222;
 }

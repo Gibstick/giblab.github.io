@@ -115,35 +115,92 @@
 <p>First set up a bare clone of the repository.</p>
 
 <div class="brush: bash">
- <pre><code>cd ~/cs246
-git clone --bare https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nb">cd</span> ~/cs246
+git clone --bare https://git.uwaterloo.ca/cs246/1155.git
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>Then clone it again for your own working copy of it.</p>
 
 <div class="brush: bash">
- <pre><code>git clone 1155.git</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>git clone 1155.git
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>On your own computer, clone using ssh from your own bare repository. Don&rsquo;t forget to clone from the bare repository; note that by convention bare repositories are appended with .git.</p>
 
 <div class="brush: bash">
- <pre><code>git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>git clone ssh://userid@linux.student.cs.uwaterloo.ca/~/cs246/1155.git
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>Then in both systems, you need to add an &ldquo;upstream&rdquo; URL so that you can fetch and pull from the offical course repository. The name doesn&rsquo;t have to be upstream, but remember to use the correct name in the other commands.</p>
 
 <div class="brush: bash">
- <pre><code>git remote add upstream https://git.uwaterloo.ca/cs246/1155.git</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>git remote add upstream https://git.uwaterloo.ca/cs246/1155.git
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>Now to &ldquo;pull from upstream&rdquo; you need to first fetch, and then merge. This is what you do instead of git pull if you want to update from the course repository to get new assignments and handouts. CS 246 should stay on the master branch.</p>
 
 <div class="brush: bash">
- <pre><code>git fetch upstream
-git merge upstream/master</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>git fetch upstream
+git merge upstream/master
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>To synchronize files between your computer and the linux.student.cs servers, use git pull/push. For example, you could be working on assignment and finish part of it in one night. You commit and push. Then the next day you can go to a computer lab, log in, and pull to resume work from where you left off. Of course, this workflow is also compatible with other workflows such as the <a href="https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow">feature branch workflow</a>, but it might be overkill for assignments.</p>
   <footer>
     <ul class="pager">
     <li class="previous">
-      <a href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">&larr; <em>Stat 230 Problem: Professor X &rsquo; s evil grading scheme</em></a>
+      <a href="/blog/2015/05/12/stat-230-problem-professor-x-s-evil-grading-scheme/">&larr; <em>Stat 230 Problem: Professor X&rsquo;s evil grading scheme</em></a>
     </li>
     <li class="next">
       <a href="/blog/2015/05/04/ocdsb-career-cruising-what-are-passwords/"><em>OCDSB Career Cruising: What are passwords?</em> &rarr;</a>
@@ -185,7 +242,7 @@ git merge upstream/master</code></pre></div>
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-08-01T00:13:03 in 1968ms</p>
+        <p>Page generated 2015-09-12T18:00:26 in 2449ms</p>
       </footer>
     </div>
     <!-- </body> JS -->

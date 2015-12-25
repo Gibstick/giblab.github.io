@@ -190,7 +190,18 @@ skinparam circledCharacterFontSize 0</code></pre>
 <p>To help catch obscure formatting errors, you can modify your runSuite script to print a diff of the test output compared to the expected output. I prefer the formatting of git diff, so I would modify my runSuite to run this upon failure:</p>
 
 <div class="brush: bash">
- <pre><code>git --no-pager diff --no-index "$actual" "$expected"</code></pre></div>
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>git --no-pager diff --no-index <span class="s2">"</span><span class="nv">$actual</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$expected</span><span class="s2">"</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
 
 <p>If you&rsquo;re using git diff, the <code>--no-index</code> switch is necessary because you don&rsquo;t want to compare within a git tree. As well, <code>--no-pager</code> prevents the command from running a pager like <code>less</code>, which is useful because you&rsquo;ll probably want to redirect the output somewhere yourself.</p>
 
@@ -240,7 +251,7 @@ skinparam circledCharacterFontSize 0</code></pre>
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
         <p><em>Copyright (c) 2015 Charlie Wang</em>.</p>
-        <p>Page generated 2015-08-01T00:13:18 in 2656ms</p>
+        <p>Page generated 2015-12-24T22:36:54 in 1826ms</p>
       </footer>
     </div>
     <!-- </body> JS -->
