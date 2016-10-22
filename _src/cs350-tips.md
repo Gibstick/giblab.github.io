@@ -41,16 +41,12 @@ so install that with
 dnf install compat-gcc-34
 ```
 
-.
-
 ## OSX / macOS
 
 The easiest way to get an old version of gcc is with
 [macports](https://www.macports.org/). Install that, and then
 
 `port install gcc48`
-
-.
 
 There's probably a way with homebrew as well.
 
@@ -72,8 +68,8 @@ __asm("break");
 ```
 
 Sys161 and os161 will handle this and bring up the "waiting for debugger
-message", and now you can attach a debugger to figure out precisely where
-you crashed.
+message", and now you can attach a debugger to figure out precisely where you
+crashed. This is for when you're too lazy to add a breakpoint in GDB yourself.
 
 # Break during an infinite loop
 
@@ -115,7 +111,8 @@ Now you no longer have to modify gdbinit for every assignment.
 
 # Syntastic
 
-[Syntastic](https://github.com/scrooloose/syntastic/) is a syntax checker for vim. Requires the symlink tip to be set up.
+[Syntastic](https://github.com/scrooloose/syntastic/) is a syntax checker
+for vim. Requires the symlink tip to be set up.
 
 Syntastic can be set up with some effort. First, you need a
 `.syntastic_c_config` file at the top level of the source tree with the

@@ -39,18 +39,16 @@
 <h2 id="fedora">Fedora</h2>
 <p>Fedora 24 and probably others should offer the package <code>compat-gcc-34</code>, so install that with</p>
 <pre><code>dnf install compat-gcc-34</code></pre>
-<p>.</p>
 <h2 id="osx-macos">OSX / macOS</h2>
 <p>The easiest way to get an old version of gcc is with <a href="https://www.macports.org/">macports</a>. Install that, and then</p>
 <p><code>port install gcc48</code></p>
-<p>.</p>
 <p>There’s probably a way with homebrew as well.</p>
 <h2 id="other">Other</h2>
 <p>Compiling an old version of gcc from source is actually kinda hard because new versions of gcc don’t compile it anymore! Try to get an old version by some other means. I haven’t been able to compile gcc 4.8 from source successfully on Fedora 24, for example.</p>
 <h1 id="break-on-panic">Break on panic</h1>
 <p>In <code>os161-1.99/kern/lib/kprintf.c</code>, go to the definition of <code>panic</code> and insert a break instruction.</p>
 <pre><code>__asm(&quot;break&quot;);</code></pre>
-<p>Sys161 and os161 will handle this and bring up the “waiting for debugger message”, and now you can attach a debugger to figure out precisely where you crashed.</p>
+<p>Sys161 and os161 will handle this and bring up the “waiting for debugger message”, and now you can attach a debugger to figure out precisely where you crashed. This is for when you’re too lazy to add a breakpoint in GDB yourself.</p>
 <h1 id="break-during-an-infinite-loop">Break during an infinite loop</h1>
 <p>If you’re in some sort of loop or deadlock and none of your breakpoints are triggering, you can simply attach a debugger at that point and it will break for you. No need to guess where to put the breakpoint.</p>
 <p>If you’re already in the debugger and you want to pause execution, a normal ^C won’t work. You can patch sys161 to respond to a signal such as SIGUSR1 to pause things. This is useful for when you’re already in the debugger and you’re inside an infinite loop.</p>
