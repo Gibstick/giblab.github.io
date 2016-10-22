@@ -159,4 +159,3 @@ the student.cs environment is supposed to have Exuberant Ctags, but it
 doesn't. You can [install it yourself](http://ctags.sourceforge.net/) in your
 home dir and then you can use ctags. The only keybindings I really use are
 `Ctrl-]` to go to the definition of a tag, and `Ctrl-T` to go up the tag stack.
-to go to th
