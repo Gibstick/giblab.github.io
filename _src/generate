@@ -14,6 +14,7 @@ done
 echo "Generating index"
 
 OUTPUT="$ROOT/site-index.html"
+rm $OUTPUT
 
 i=0
 for filepath in `find "$ROOT" -mindepth 1 -type d | sort`; do
