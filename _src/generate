@@ -1,4 +1,29 @@
-#!/bin/sh
-for source_file in *.md; do
-    pandoc -s -S --toc -c style.css -o ../"${source_file%%.*}.html" "${source_file}"
+#!/bin/bash
+
+ROOT="../tmp-output"
+
+# mirror directory structure
+find . -type d | cpio -dumpl "$ROOT"
+
+for source_file in $(find . -type f -name "*.md" ); do
+    echo "Generating html for ${source_file} -> ${source_file%.*}.html"
+    pandoc -s -S --toc -c style.css -o "$ROOT/${source_file%.*}.html" "${source_file}"
 done
+
+# generate site index
+echo "Generating index"
+
+OUTPUT="$ROOT/site-index.html"
+
+i=0
+for filepath in `find "$ROOT" -mindepth 1 -type d | sort`; do
+  path=`basename "$filepath"`
+  echo "-$path" >> $OUTPUT
+  for i in `find "$filepath" -mindepth 1 -type f -name "*.html" | sort`; do
+    file=`basename "$i"`
+    echo "Found	-"[/$path/$file\]"($file)"
+    echo "	-"[/$path/$file\]"($file)" >> $OUTPUT
+  done
+done
+
+cp -R $ROOT/* ../.
