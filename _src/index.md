@@ -9,5 +9,4 @@ Contact: s455wang at csclub dot uwaterloo dot ca
 [Github](https://github.com/gibstick)
 
 # Links
-[Is the Computer Science Club office open?](http://csclub.uwaterloo.ca/~s455wang/office-status/)
-[Site index](site-index.html)
+- [Is the Computer Science Club office open?](http://csclub.uwaterloo.ca/~s455wang/office-status/)
