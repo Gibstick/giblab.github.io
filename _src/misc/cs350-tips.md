@@ -70,6 +70,8 @@ __asm("break");
 Sys161 and os161 will handle this and bring up the "waiting for debugger
 message", and now you can attach a debugger to figure out precisely where you
 crashed. This is for when you're too lazy to add a breakpoint in GDB yourself.
+For bonus points, you can set a flag at runtime to determine whether or not
+this is enabled.
 
 # Break during an infinite loop
 
@@ -90,7 +92,7 @@ apply the patch.
 
 # Symlinks to the currently configured assignment
 
-This is required for the next two sections.
+This is a prerequisite for the next two sections.
 
 Much like how the makefiles include a symlink from `kernel` to
 the current assignment, eg. `kernel-ASST0`, it's useful to create
@@ -145,7 +147,7 @@ If you use syntastic for checking other non-cs350 C code, install the
 [localrc](https://github.com/thinca/vim-localrc) plugin and place the above
 setting in your `.local.vimrc` as per the plugin documentation.
 
-I believe that this is one of the more useful tips as it saves you a lot of
+I believe that this is one of the most useful tips as it saves you a lot of
 time trying to fix compilation errors.
 
 # Ctags
@@ -156,3 +158,14 @@ the student.cs environment is supposed to have Exuberant Ctags, but it
 doesn't. You can [install it yourself](http://ctags.sourceforge.net/) in your
 home dir and then you can use ctags. The only keybindings I really use are
 `Ctrl-]` to go to the definition of a tag, and `Ctrl-T` to go up the tag stack.
+
+# Run Tests Repeatedly
+
+Due to some quirkiness with how sys161 takes input, simply piping output
+to `sys161` makes it hang. The alternative is to send long strings on the
+command line.  There's a limit for how long your arguments can be but you won't
+reach it even with 400 tests or so. Here's a [script](/static/repeat-test.sh)
+for it [(preview)](/static/repeat-test.html).
+
+This is most useful in assignment 3.
+
