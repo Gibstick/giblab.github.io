@@ -10,7 +10,7 @@ for source_file in $(find . -type f -name "*.md" ); do
     pandoc -s -S --toc -c "/style.css" -o "$ROOT/${source_file%.*}.html" "${source_file}"
 done
 
- generate site index
+# generate site index
 echo "Generating index"
 
 OUTPUT="site-index.md"
