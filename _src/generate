@@ -18,18 +18,18 @@ OUTPUT="site-index.md"
 i=0
 echo "# Site Index" > $OUTPUT
 for filepath in `find "$ROOT" -mindepth 1 -type d | sort`; do
-  path=`basename "$filepath"`
-  echo "- $path" >> $OUTPUT
-  for i in `find "$filepath" -mindepth 1 -type f -name "*.html" | sort`; do
-    file=`basename "$i"`
-    echo "Found	-"\[$file\]"($path/$file)"
-    echo "    - "\[$file\]"($path/$file)" >> $OUTPUT
+    path=`basename "$filepath"`
+    echo "- $path" >> $OUTPUT
+    for i in `find "$filepath" -mindepth 1 -type f -name "*.html" | sort`; do
+        file=`basename "$i"`
+        echo "Found	-"\[$file\]"($path/$file)"
+        echo "    - "\[$file\]"($path/$file)" >> $OUTPUT
   done
 done
 
 pandoc -s -S -c style.css -o "../site-index.html" "$OUTPUT"
 cp -R $ROOT/* ../.
 #
-#cat $OUTPUT
+cat $OUTPUT
 #
-#rm "$OUTPUT"
+rm "$OUTPUT"
