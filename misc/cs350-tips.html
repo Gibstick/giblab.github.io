@@ -6,7 +6,7 @@
   <meta name="generator" content="pandoc" />
   <title></title>
   <style type="text/css">code{white-space: pre;}</style>
-  <link rel="stylesheet" href="/style.css" type="text/css" />
+  <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
 <div id="TOC">
@@ -53,10 +53,10 @@
 <h1 id="break-during-an-infinite-loop">Break during an infinite loop</h1>
 <p>If you’re in some sort of loop or deadlock and none of your breakpoints are triggering, you can simply attach a debugger at that point and it will break for you. No need to guess where to put the breakpoint.</p>
 <p>If you’re already in the debugger and you want to pause execution, a normal ^C won’t work. You can patch sys161 to respond to a signal such as SIGUSR1 to pause things. This is useful for when you’re already in the debugger and you’re inside an infinite loop.</p>
-<p>For a ready-made patch, see <a href="http://www.student.cs.uwaterloo.ca/~s455wang/break_on_sigusr1.patch">http://www.student.cs.uwaterloo.ca/~s455wang/break_on_sigusr1.patch</a>. Copy that to the top level of the sys161 source tree and apply it with <code>git apply break_on_sigusr1.patch</code>. You do not need to have a git repository to apply the patch.</p>
+<p>For a ready-made patch, see <a href="http://www.student.cs.uwaterloo.ca/~s455wang/break_on_sigusr1.patch" class="uri">http://www.student.cs.uwaterloo.ca/~s455wang/break_on_sigusr1.patch</a>. Copy that to the top level of the sys161 source tree and apply it with <code>git apply break_on_sigusr1.patch</code>. You do not need to have a git repository to apply the patch.</p>
 <h1 id="symlinks-to-the-currently-configured-assignment">Symlinks to the currently configured assignment</h1>
 <p>This is a prerequisite for the next two sections.</p>
-<p>Much like how the makefiles include a symlink from <code>kernel</code> to the current assignment, eg. <code>kernel-ASST0</code>, it’s useful to create a symlink from <code>kern/compile/CURRENT</code> to the current compile directory. Patch <code>kern/conf/config</code> with the patch located at <a href="https://www.student.cs.uwaterloo.ca/~s455wang/config-link.patch">https://www.student.cs.uwaterloo.ca/~s455wang/config-link.patch</a>.</p>
+<p>Much like how the makefiles include a symlink from <code>kernel</code> to the current assignment, eg. <code>kernel-ASST0</code>, it’s useful to create a symlink from <code>kern/compile/CURRENT</code> to the current compile directory. Patch <code>kern/conf/config</code> with the patch located at <a href="https://www.student.cs.uwaterloo.ca/~s455wang/config-link.patch" class="uri">https://www.student.cs.uwaterloo.ca/~s455wang/config-link.patch</a>.</p>
 <h1 id="gdbinit-that-points-to-the-current-assignment">gdbinit that points to the current assignment</h1>
 <p>With the previous tip in place, let your .gdbinit file be</p>
 <pre><code>dir ../os161-1.99/kern/compile/CURRENT
