@@ -1,13 +1,13 @@
 #!/bin/bash
 
-ROOT="../tmp-output"
+ROOT="../output"
 
 # mirror directory structure
 find . -type d | cpio -dumpl "$ROOT"
 
 for source_file in $(find . -type f -name "*.md" ); do
     echo "Generating html for ${source_file} -> ${source_file%.*}.html"
-    pandoc -s -S --toc -c "style.css" -o "$ROOT/${source_file%.*}.html" "${source_file}"
+    pandoc -t html5 --self-contained --smart --toc -c "../style.css" -o "$ROOT/${source_file%.*}.html" "${source_file}"
 done
 
 # generate site index
@@ -27,8 +27,10 @@ for filepath in `find "$ROOT" -mindepth 1 -type d | sort`; do
   done
 done
 
-pandoc -s -S -c style.css -o "../site-index.html" "$OUTPUT"
-cp -R $ROOT/* ../.
+pandoc -t html5 --self-contained --smart -c ../style.css -o "$ROOT/site-index.html" "$OUTPUT"
+
+cp -r ../static/ ../output/.
+
 #
 cat $OUTPUT
 #
