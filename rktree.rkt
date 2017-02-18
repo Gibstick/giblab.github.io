@@ -24,7 +24,7 @@
      (define link-location (path->string path))
      (define link-text (path->string (last exploded-path)))
      (define indent
-       (make-string (* (sub1 (length exploded-path)) 2) #\space))
+       (make-string (* (sub1 (length exploded-path)) 4) #\space))
      (format "~a- [~a](~a)"
              indent link-text link-location)]))
 
