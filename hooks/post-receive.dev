@@ -1,0 +1,19 @@
+#!/bin/sh
+
+WORK_TREE=/home/charlie/site-dev
+GIT_DIR="$WORK_TREE"/site-dev.git
+
+fnmatch () { case "$2" in $1) return 0 ;; *) return 1 ;; esac ; }
+
+while read oldrev newrev ref
+do
+    printf "%s %s %s\\n" "$oldrev" "$newrev" "$ref"
+    whoami
+    if fnmatch '*dev' "$ref";
+    then
+        echo "Deploying dev"
+        git --work-tree="$WORK_TREE" --git-dir="$GIT_DIR" checkout -f
+        cd "$WORK_TREE"
+        ./generate.sh
+    fi
+done
