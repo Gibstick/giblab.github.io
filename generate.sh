@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/sh
 
 [ -d "output" ] && rm -r output
 mkdir output
-export ROOT=$(readlink -e "output")
+ROOT=$(readlink -e "output")
+export ROOT
 echo "Output directory: $ROOT"
 
 raco make rktree.rkt &
