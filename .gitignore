@@ -1,4 +1,4 @@
-.frog/build
-_src/compiled/
 *.bak
-tmp-output/
+output/
+*.swp
+compiled/
