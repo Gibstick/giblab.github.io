@@ -1,8 +1,9 @@
 #!/bin/sh
 
-[ -d "output" ] && rm -r output
-mkdir output
-ROOT=$(readlink -e "output")
+ROOT="output_"
+[ -d "$ROOT" ] && rm -r -- "$ROOT"
+mkdir "$ROOT"
+ROOT=$(readlink -e "output_") # replace with absolute path
 export ROOT
 echo "Output directory: $ROOT"
 
@@ -25,5 +26,5 @@ racket ../rktree.rkt --title "Site Index" --whitelist .html > "$SITE_INDEX_MD"
 pandoc -t html5 --self-contained --smart -c ../css/style.css -o "$ROOT"/site-index.html "$SITE_INDEX_MD"
 rm "$SITE_INDEX_MD"
 
-cp -r ../static/ ../output/.
+cp -r ../static/ "$ROOT"/.
 
