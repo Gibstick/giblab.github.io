@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link href="data:text/css;charset=utf-8,body%20%7B%0Amargin%3A%201em%20auto%3B%0Amax%2Dwidth%3A%2040em%3B%0Apadding%3A%200%2E62em%3B%0Afont%3A%201%2E2em%2F1%2E62em%20sans%2Dserif%3B%0A%7D%0Ah1%2Ch2%2Ch3%20%7B%0Aline%2Dheight%3A%201%2E2em%3B%0A%7D%0A%40media%20print%20%7B%0Abody%20%7B%0Amax%2Dwidth%3Anone%0A%7D%0A%7D%0Aa%3Alink%20%7B%20color%3A%20%23AA3939%3B%20%7D%0Aa%3Avisited%20%7B%20color%3A%20%23550000%3B%20%7D%0Atable%20%7B%0Aborder%2Dspacing%3A%200%2E5em%3B%0A%7D%0A%0A" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#imapsmtp-setup">IMAP/SMTP Setup</a></li>
+<li><a href="#forwarding-emails">Forwarding Emails</a></li>
+</ul>
+</nav>
+<h1 id="imapsmtp-setup">IMAP/SMTP Setup</h1>
+<p>These are standard the IMAP/SMTP settings required for most mail clients.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Username</td>
+<td>username@edu.uwaterloo.ca</td>
+</tr>
+<tr class="even">
+<td>Password</td>
+<td>WatIAM password</td>
+</tr>
+<tr class="odd">
+<td>Authentication</td>
+<td>“Normal password”</td>
+</tr>
+<tr class="even">
+<td>Incoming Mail Server (IMAP)</td>
+<td><code>outlook.office365.com</code></td>
+</tr>
+<tr class="odd">
+<td>Incoming Mail Server Port + Security</td>
+<td>993 SSL/TLS</td>
+</tr>
+<tr class="even">
+<td>Outgoing Mail Server (SMTP)</td>
+<td><code>smtp.office365.com</code></td>
+</tr>
+<tr class="odd">
+<td>Outgoing Mail Server Port + Security</td>
+<td>587 STARTTLS</td>
+</tr>
+</tbody>
+</table>
+<h1 id="forwarding-emails">Forwarding Emails</h1>
+<p>As of 2017-05-07, email settings in WatIAM are locked. To forward from Office 365, navigate to <a href="https://outlook.office.com/owa/?path=/options/inboxrules" class="uri">https://outlook.office.com/owa/?path=/options/inboxrules</a> and create a new inbox rule. (Alternatively, click through Options &gt; Mail &gt; Automatic Processing &gt; Inbox and sweep rules.)</p>
+<ol type="1">
+<li>Enter a name for the rule</li>
+<li><code>When the message arrives, and it matches all of these conditions</code>: “[Apply to all messages]”</li>
+<li><code>Do all of the following</code>: “Redirect the message to…”</li>
+<li>Enter the redirect address at the top</li>
+<li>Add an action to delete the message if desired</li>
+<li>Check “Stop processing more rules” because you probably don’t care about the message anymore</li>
+</ol>
+</body>
+</html>
