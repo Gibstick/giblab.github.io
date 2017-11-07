@@ -6,7 +6,7 @@ Computer games got me hooked on computers, which then led to scripting, programm
 
 Contact: s455wang at csclub dot uwaterloo dot ca
 
-[Github](https://github.com/gibstick)
+[GitHub](https://github.com/gibstick)
 
 # Links
 - [Is the Computer Science Club office open?](http://csclub.uwaterloo.ca/~s455wang/office-status/)
